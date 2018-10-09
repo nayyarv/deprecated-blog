@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Varun Nayyar'
-SITENAME = u'A Blog'
+AUTHOR = 'Varun Nayyar'
+SITENAME = 'Skeptical Learning'
 SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'Australia/Sydney'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
