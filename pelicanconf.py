@@ -13,9 +13,11 @@ TIMEZONE = 'Australia/Sydney'
 DEFAULT_LANG = 'en'
 
 MARKUP = ('md', 'ipynb')
-PLUGIN_PATHS = ['../pelicanplugins']
+PLUGIN_PATHS = ['/Users/varun/Documents/github/pelicanplugins']
 PLUGINS = ['ipynb.markup']
 IPYNB_USE_METACELL = True
+
+IGNORE_FILES = [".ipynb_checkpoints"]
 
 
 
