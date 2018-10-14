@@ -12,6 +12,13 @@ TIMEZONE = 'Australia/Sydney'
 
 DEFAULT_LANG = 'en'
 
+MARKUP = ('md', 'ipynb')
+PLUGIN_PATHS = ['../pelicanplugins']
+PLUGINS = ['ipynb.markup']
+IPYNB_USE_METACELL = True
+
+
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
