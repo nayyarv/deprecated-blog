@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Varun Nayyar'
 SITENAME = 'Skeptical Learning'
-SITEURL = 'nayyarv.github.io'
+SITEURL = ''
 
 PATH = 'content'
 
@@ -43,5 +43,11 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+# THEME = "simple"
+
 THEME = "/Users/varun/Documents/github/pelican-themes/pelican-striped-html5up"
+
+# themestuff
+SITESUBTITLE = "A Skeptics Blog on ML"
+LINKS = [("Tosser", "/tosser.html"),]
 
