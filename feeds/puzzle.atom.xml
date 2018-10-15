@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Skeptical Learning</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-10-15T15:05:00+11:00</updated><entry><title>Reinforcement Tosser</title><link href="/blog/reinforcement-tosser" rel="alternate"></link><published>2018-10-15T15:05:00+11:00</published><updated>2018-10-15T15:05:00+11:00</updated><author><name>Varun Nayyar</name></author><id>tag:None,2018-10-15:/blog/reinforcement-tosser</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Skeptical Learning - Puzzle</title><link href="/" rel="alternate"></link><link href="/feeds/puzzle.atom.xml" rel="self"></link><id>/</id><updated>2018-10-15T15:05:00+11:00</updated><entry><title>Reinforcement Tosser</title><link href="/blog/reinforcement-tosser" rel="alternate"></link><published>2018-10-15T15:05:00+11:00</published><updated>2018-10-15T15:05:00+11:00</updated><author><name>Varun Nayyar</name></author><id>tag:None,2018-10-15:/blog/reinforcement-tosser</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -2951,12 +2951,4 @@ Let's have a look at mean, median and 25%, 75% results in this space.&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="puzzle"></category><category term="gym"></category><category term="interview"></category></entry><entry><title>My super title</title><link href="/blog/my-super-post" rel="alternate"></link><published>2010-12-03T10:20:00+11:00</published><updated>2010-12-05T19:30:00+11:00</updated><author><name>Varun Nayyar</name></author><id>tag:None,2010-12-03:/blog/my-super-post</id><summary type="html">&lt;p&gt;Testing&lt;/p&gt;
-&lt;h1&gt;h1&lt;/h1&gt;
-&lt;p&gt;The above is h1&lt;/p&gt;
-&lt;h2&gt;h2&lt;/h2&gt;
-&lt;p&gt;The above is h2&lt;/p&gt;</summary><content type="html">&lt;p&gt;Testing&lt;/p&gt;
-&lt;h1&gt;h1&lt;/h1&gt;
-&lt;p&gt;The above is h1&lt;/p&gt;
-&lt;h2&gt;h2&lt;/h2&gt;
-&lt;p&gt;The above is h2&lt;/p&gt;</content><category term="pelican"></category><category term="publishing"></category></entry></feed>
+</content><category term="puzzle"></category><category term="gym"></category><category term="interview"></category></entry></feed>
