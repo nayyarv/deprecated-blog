@@ -22,7 +22,7 @@ SITENAME = 'Skeptical Learning'
 SITEDESCRIPTION = 'ML without the rose tinted lenses'
 DEFAULT_DATE_FORMAT = "%B %-d, %Y"
 
-SITEURL = ''
+SITEURL = 'http://nayyarv.github.io/'
 
 PATH = 'content'
 STATIC_PATHS = ['images']
@@ -76,7 +76,7 @@ EXTRA_PATH_METADATA = {
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
 # THEME = "simple"
 THEME = "/Users/varun/Documents/github/pelican-html5up-halcyonic"
