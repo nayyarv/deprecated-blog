@@ -2,11 +2,11 @@ Title: About
 
 ## The Blog
 
-The blog's name is a a twist on "The Elements of Statistical Learning", the famous book by Hastie, Tibshirani, Friedman that gave me my first foundation in ML. With the advent of machine learning, GPU's and neural nets of all kinds, there has been a loss in skepticism that statisticians always include in their results. As this field has exploded and grown beyond just the computer scientists and statisticans, the confidence interval has disappeared (and rightfully so), but the pesimissim that pervaded any kind of prediction and inference has gone with it, which I consider a loss. All models are imperfect (but some are useful) and we need to convey that pessimism rather pulling a George W "We Did It" after a successful set of results.
+With the explosion of Data Science (a term that went through many evolutions), we are seeing a field that was the pure domain of the statisticians being reshaped with the wide spread knowledge of Machine Learning. But as the crochety statisticians have been overwhelmed, there has been a corresponding loss in the skepticism they brought to the table. Thinking about the hype we see about Deep Learning, can you recall a technique in stats that ever received as much hype? Statistics would always report prediction/credible intervals to tell you how good they were, and pessimism in one's results was the de facto standard. Nowadays, training a model of some topology and getting results seems to come with "We Did It" banner and I think the loss of skepticism in the field has been a net loss for all practitioners.
 
-This blog aims at looking at bringing skepticism back to statistics and ML and looks at not just results, but hidden costs to using the fanciest model on the market. Maintenance of models, deployment and interpretability for someone not techincally versed are big issues that nobody ever discusses in this industry and are things that should be considered when approaching problems. Recently, the slew of data makes it very easy to generate biased models that reflect the bias of the underlying hummans/data and this is an area Data Scientist and ML Engineers are not taking seriously yet.
+This blog aims at looking at bringing skepticism back to statistics and ML and looks at not just results, but hidden costs to using the fanciest model on the market. Maintenance of models, deployment and interpretability for someone not technically versed are big issues that nobody ever discusses in this industry and are things that should be considered when approaching problems. Recently, the slew of data makes it very easy to generate biased models that reflect the bias of the underlying humans/data and this is an area Data Scientist and ML Engineers are not taking seriously yet.
 
-This is github after all, so this will be mostly techincally focussed. 
+This is github after all, so this will be mostly technically focussed. 
 
 
 ## Me

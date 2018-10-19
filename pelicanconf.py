@@ -22,7 +22,7 @@ SITENAME = 'Skeptical Learning'
 SITEDESCRIPTION = 'ML without the rose tinted lenses'
 DEFAULT_DATE_FORMAT = "%B %-d, %Y"
 
-SITEURL = 'http://nayyarv.github.io/'
+SITEURL = 'https://nayyarv.github.io'
 
 PATH = 'content'
 STATIC_PATHS = ['images']
