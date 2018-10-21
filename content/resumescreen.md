@@ -35,7 +35,7 @@ I love cross majors, comp sci/stats tend to give the best of both worlds in term
 
 ## Higher Education (PhDs)
 
-Overall, I'm mixed. PhD > undergrad, but PhD = Undergrad + 3 years experience. I think PhDs tend to be overrated, but are a safer bet than untested undergrad. Once experience comes into play, that'll be more important anyway. PhDs are safer bets, but they don't tend to do well in management roles.  
+Overall, I'm mixed. PhD > undergrad, but PhD = Undergrad + 3 years experience. I think PhDs tend to be overrated, but are a safer bet than untested undergrad. I think experience + degree/PhD is the best combination.
 
 ### The Good
 
