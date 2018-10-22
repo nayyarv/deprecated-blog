@@ -4,7 +4,6 @@ Date: 2018-10-22 10:20
 Category: advice
 Tags: skeptical, ds, advice, ab, bandit
 Authors: Varun Nayyar
-Status: draft
 
 This is a short article, primarily full of resources.
 
