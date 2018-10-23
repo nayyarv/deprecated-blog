@@ -1,21 +1,21 @@
 Title: A/B testing / Bandit Methods
-Subtitle: A/B testing and Bandit
+Subtitle: Resources and Skepticism
 Date: 2018-10-22 10:20
 Category: advice
 Tags: skeptical, ds, advice, ab, bandit
 Authors: Varun Nayyar
 
-This is a short article, primarily full of resources.
+This is a short article, primarily full of resources. I assume some basic knowledge of A/B testing
 
 ## A/B testing
 
-I must start posting Evan Miller's articles on the subject which I consider a fantastic resource in this area. Additionally, it's also really easy 
+I must start posting Evan Miller's articles on the subject which I consider a fantastic resource in this area. 
 
 1. [How not to run an A/B test](https://www.evanmiller.org/how-not-to-run-an-ab-test.html) - never end an A/B test before it's allocated run time.
 2. [Sequential A/B testing](https://www.evanmiller.org/sequential-ab-testing.html) - How to run an A/B test that allows for stopping early without ruining results. 
-3. [Bayesian A/B testing](https://www.evanmiller.org/bayesian-ab-testing.html) - a Bayesian approach that allows one to 'peek'
+3. [Bayesian A/B testing](https://www.evanmiller.org/bayesian-ab-testing.html) - a Bayesian approach that allows one to 'peek' whenever necessary.
 
-Additionally, this article on [statstical power](https://www.evanmiller.org/the-low-base-rate-problem.html) is also something worth reading as it touches on assessing significance when your click rates are low - basically the lower the success rate is, the more samples you need to ensure that you've reached significance.
+Additionally, this article on [statstical power](https://www.evanmiller.org/the-low-base-rate-problem.html) is also something worth reading as it touches on assessing significance as your click and lift is low - basically the lower the success rate is, the more samples you need to ensure that you've reached significance.
 
 ### A/B Testing Summary + Skepticism
 
