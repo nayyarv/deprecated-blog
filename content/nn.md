@@ -9,7 +9,9 @@ My first neural net was actually coded up in 2009. I had decided to go to med sc
 
 When I finally stopped dabbling in ML and started taking a more formal approach at the start of 2014, I did it primarily out of "Elements of Statistical Learning" by Hastie, Tibshirani and Friedmann. In the very first section on neural nets, this was the description they had given
 
-> There has been a great deal of hype surrounding neural networks, making them seem magical and mysterious. As we make clear in this section, they are just non-linear statistical models, much like the projection pursuit regression model discussed above.
+"""
+There has been a great deal of hype surrounding neural networks, making them seem magical and mysterious. As we make clear in this section, they are just non-linear statistical models, much like the projection pursuit regression model discussed above.
+"""
 
 This had been published in 2009, a few years before [Alexnet](https://en.wikipedia.org/wiki/AlexNet) and GPU's burst on scene in 2012. As such, the neural nets in the textbook were small, the [relu](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) hadn't even made the cut in activation functions described, and convolutional neural nets were described in some detail, but without the word convolution (called constrained nets). My lecturer had inherited the bias, and through him, I too considered that neural nets were nothing special. 
 
