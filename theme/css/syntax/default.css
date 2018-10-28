@@ -1,7 +1,17 @@
+.highlight  { 
+    background: #f8f8f8; 
+    border: 10px; 
+    padding: 10px; 
+    white-space: nowrap;
+    font-family: Monaco;
+    font-size: 70%;
+    margin: .5em 0 0.5em 0.5em;
+    line-height: 1.5em;
+}
 .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; border: 1px; padding: 10px;}
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .n {color:inherit; } /* Normal */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
 .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */

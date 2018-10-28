@@ -12,7 +12,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 100%;
+		/*font-size: 100%;*/
 		font: inherit;
 		vertical-align: baseline;
 	}
@@ -25,12 +25,15 @@
 		line-height: 1;
 	}
 
-	ol, ul {
-		list-style: none;
-	}
 
 	blockquote, q {
-		quotes: none;
+		/*quotes: none;*/
+		color: #96a9b5;
+	    display: block;
+	    margin-top: 1em;
+	    margin-bottom: 1em;
+	    margin-left: 40px;
+	    margin-right: 40px;
 	}
 
 	blockquote:before, blockquote:after, q:before, q:after {
@@ -1070,7 +1073,7 @@
 	body {
 		background: #D4D9DD url("images/bg03.jpg");
 		color: #474f51;
-		font-size: 13.5pt;
+		font-size: 14pt;
 		font-family: 'Yanone Kaffeesatz';
 		line-height: 1.85em;
 		font-weight: 300;
@@ -1078,15 +1081,25 @@
 
 	input, textarea, select {
 		color: #474f51;
-		font-size: 13.5pt;
+		font-size: 12pt;
 		font-family: 'Yanone Kaffeesatz';
 		line-height: 1.85em;
 		font-weight: 300;
 	}
 
-	ul, ol, p, dl {
-		margin: 0 0 2em 0;
+	p, dl {
+		margin: 0 0 0.5em 0;
 	}
+
+
+	ol, ul {
+		margin: 0.5em 0 0.5em 1em;
+	}
+
+	li {
+		margin-left: 0.5em;
+	}
+
 
 	a {
 		text-decoration: underline;
@@ -1394,12 +1407,14 @@
 			#content h2 {
 				font-size: 1.8em;
 				color: #373f42;
-				margin: 0 0 0.25em 0;
+				margin: 1em 0 0.25em 0;
 			}
 
 			#content h3 {
 				color: #96a9b5;
 				font-size: 1.25em;
+				margin: 0.25em 0 0em 0;
+
 			}
 			#content h4 {
 				color: #373f42;
@@ -1545,7 +1560,7 @@
 			}
 
 			body, input, textarea, select {
-				font-size: 13pt;
+				font-size: 11pt;
 				line-height: 1.4em;
 			}
 
@@ -1888,8 +1903,8 @@
 			text-align: center;
 			text-decoration: none;
 			color: inherit;
-			
-			
+
+
 		}
 
 			.pagination a:hover {
@@ -1900,7 +1915,7 @@
 			.pagination  a.active {
 				background-color: inherit;
 				color: inherit;
-				
+
 			}
 a.red  {
 	background-color: inherit;
@@ -1911,3 +1926,10 @@ hr {
 	width:33%;
 	margin-bottom: 35px;
 }
+strong {
+	font-weight: 500;
+}
+em {
+	font-style: italic;
+}
+
