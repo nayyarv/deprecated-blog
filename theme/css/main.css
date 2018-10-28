@@ -1116,8 +1116,13 @@
 
 /* Multi-use */
 
+	.link-list {
+		margin: 0;
+	}
 	.link-list li {
+		list-style: none;
 		padding: 0.2em 0 0.2em 0;
+		margin-left: 0;
 	}
 
 		.link-list li:first-child {
