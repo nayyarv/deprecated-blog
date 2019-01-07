@@ -4,7 +4,7 @@ Date: 2018-09-03 10:20
 Category: advice
 Tags: bayesian, ds, advice, interview, resume
 Authors: Varun Nayyar
-
+Status: draft
 
 Like all enthusiastic idiots, I thought it would be a great idea to help in interviewing and resume screening. Unfortunately, this meant that I ended up reading a lot of resumes and started to develop my own model of what was important, from education to portfolios and things in between. I assume you're going to have an exhaustive interview process anyway, so resume screening really should be about finding people with potential, rather than scouring for potential.
 
