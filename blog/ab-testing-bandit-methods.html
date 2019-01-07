@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Skeptical Learning - A/B testing / Bandit Methods</title>
+		<title>Bayesian Learning - A/B testing / Bandit Methods</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="/theme/css/syntax/default.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="/theme/css/ie9.css" /><![endif]-->
   		<meta property="og:locale" content="en">
-		<meta property="og:site_name" content="Skeptical Learning">
+		<meta property="og:site_name" content="Bayesian Learning">
 
   <meta property="og:type" content="article">
   <meta property="article:author" content="Varun Nayyar">
@@ -33,7 +33,7 @@
 							<div class="12u">
 
 								<!-- Logo -->
-									<h1><a href="/" id="logo">Skeptical Learning</a></h1>
+									<h1><a href="/" id="logo">Bayesian Learning</a></h1>
 
 								<!-- Nav -->
 									<nav id="nav">
@@ -72,7 +72,7 @@
 <li><a href="https://www.evanmiller.org/bayesian-ab-testing.html">Bayesian A/B testing</a> - a Bayesian approach that allows one to 'peek' whenever necessary.</li>
 </ol>
 <p>Additionally, this article on <a href="https://www.evanmiller.org/the-low-base-rate-problem.html">statstical power</a> is also something worth reading as it touches on assessing significance as your click and lift is low - basically the lower the success rate is, the more samples you need to ensure that you've reached significance.</p>
-<h3>A/B Testing Summary + Skepticism</h3>
+<h3>A/B Testing Summary + Critique</h3>
 <ol>
 <li>All the approaches of A/B testing use the same tech backend. The Sequential and Bayesian approaches allow for checking the results partway through, so there is an expectation that you can check on your results every so often, and maybe even automate this part</li>
 <li>Traditional A/B testing is the most robust approach - if you use an early stop version, you run the risk of catching significance on a certain day. For example, testing a greeting that uses "Monday" performs better on monday and might show significance that wouldn't be ther when run over a period of a week.</li>
@@ -88,7 +88,7 @@ A/B testing does exist in other scenarios (traditionally in use of new medical t
 <p><a href="https://lilianweng.github.io/lil-log/2018/01/23/the-multi-armed-bandit-problem-and-its-solutions.html">Bandit methods</a> are the other side of the coin which basically approach the problem of trying a few different methods, seeing the success of one over the other and presenting the more successful one more often. </p>
 <p>More precisely, we set a parameter epsilon which is an indication of our exploration rate that we reduce over the period of our testing (a week for example). We then choose a random page if epsilon &gt; random() otherwise, we serve our best page. </p>
 <p>Bandit methods are a similar response to traditional A/B testing, the question of regret. When you have a better method (say a donation webpage) that's outperforming your old one, you lose a lot of money for each day you run the A/B test. Also, if you run a lot of A/B tests, setting up and analysing at the end is always a pain, can you set you</p>
-<h3>Bandt Summary + Skepticism</h3>
+<h3>Bandt Summary + Critique</h3>
 <ol>
 <li>A more involved tech stack. While A/B testing simply records result of web A/B interaction, bandit methods need to store result of the interaction and then work out which webpage to show based on past results. Unlike a simple random call to determine which page to show, the code at the delivery layer is a bit more involved. This is likely the big issue</li>
 <li>Bandit methods are quite fragile - they rely on instant feedback to adjust the probability of returning the best value. Email campaigns or conversions that are non-instant break the fundamental assumptions of bandit methods and can lead to it acting quite erratic.</li>
@@ -113,7 +113,7 @@ A/B testing does exist in other scenarios (traditionally in use of new medical t
               <a class="pagination" href="/blog/cartpole-q-learning">
              &larr; CartPole Q Learning ]
          </a>
-              <a class="pagination" href="/blog/skeptical-neural-nets" >[ Skeptical Neural Nets &rarr;</a>
+              <a class="pagination" href="/blog/critique-neural-nets" >[ Critique Neural Nets &rarr;</a>
             </div>
 										</section>
 
@@ -128,7 +128,7 @@ A/B testing does exist in other scenarios (traditionally in use of new medical t
                                             <ul class="link-list">
 
                                                 
-                                                <li><a class = "red" href="/blog/skeptical-neural-nets">Skeptical Neural Nets</a><br>Deep Learning, Convolution and the Hype Machine</li>
+                                                <li><a class = "red" href="/blog/critique-neural-nets">Critique Neural Nets</a><br>Deep Learning, Convolution and the Hype Machine</li>
 
                                                 
                                                 <li><a class = "red" href="/blog/ab-testing-bandit-methods">A/B testing / Bandit Methods</a><br>Resources and Skepticism</li>
@@ -175,7 +175,7 @@ A/B testing does exist in other scenarios (traditionally in use of new medical t
                 </div>
                             <!-- Copyright -->
                 <div id="copyright">
-                     &copy; 2018 | Design: <a href="http://html5up.net">HTML5 UP</a> | Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>
+                     &copy; 2019 | Design: <a href="http://html5up.net">HTML5 UP</a> | Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>
                 </div>
 
 

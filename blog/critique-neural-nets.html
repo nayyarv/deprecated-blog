@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Skeptical Learning - Skeptical Neural Nets</title>
+		<title>Bayesian Learning - Critique Neural Nets</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
@@ -14,12 +14,12 @@
 		<link rel="stylesheet" href="/theme/css/syntax/default.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="/theme/css/ie9.css" /><![endif]-->
   		<meta property="og:locale" content="en">
-		<meta property="og:site_name" content="Skeptical Learning">
+		<meta property="og:site_name" content="Bayesian Learning">
 
   <meta property="og:type" content="article">
   <meta property="article:author" content="Varun Nayyar">
-  <meta property="og:url" content="/blog/skeptical-neural-nets">
-  <meta property="og:title" content="Skeptical Neural Nets">
+  <meta property="og:url" content="/blog/critique-neural-nets">
+  <meta property="og:title" content="Critique Neural Nets">
   <meta property="og:description" content="Deep Learning, Convolution and the Hype Machine">
   <meta property="article:published_time" content="2018-10-23 10:20:00+11:00">
 	</head>
@@ -33,7 +33,7 @@
 							<div class="12u">
 
 								<!-- Logo -->
-									<h1><a href="/" id="logo">Skeptical Learning</a></h1>
+									<h1><a href="/" id="logo">Bayesian Learning</a></h1>
 
 								<!-- Nav -->
 									<nav id="nav">
@@ -59,7 +59,7 @@
 
 										<section>
             <header>
-            <h2>Skeptical Neural Nets</h2>
+            <h2>Critique Neural Nets</h2>
 <h3>Deep Learning, Convolution and the Hype Machine</h3>            <h4>Published on October 23rd, 2018</h4>
 
             </header>
@@ -118,7 +118,7 @@
 <h2>The GPU</h2>
 <p>It's well known that training neural nets is embarrassingly parallel, and that GPUs are very good at parallel tasks. The result was obvious, but I don't think many people realise just how critical GPUs have been to the development of neural nets. At around 2012, clock cycles stopped improving like they were in the years before, Moore's law looked in danger of becoming the number of processors per chip and scientific programming community had been taking advantage of GPU and CUDA code to do various things to tap into more FLOPs than standard compute cores could provide.</p>
 <p>As a GPU is a bunch of streaming multiprocessors (<a href="https://github.com/nayyarv/PyCudaIntro">See my talk on PyCUDA</a> for more details), it's effectively a multicore cpu where number of cores are optimised over clock speed. Anything that could take advantage of many cores would gain huge benefits. And unlike CPU makers, GPU makers still had a lot of low hanging fruit left to grab, not to mention sticking additional cores wasn't a copout. While they would improve their micro-architecture every so often, the clock rates of each streaming processor hasn't improved greatly, but the number of them increases significantly. In fact, Intel sells versions of GPUs that are packed with CPU cores instead of GPU cores.</p>
-<p>Without the aforementioned AlexNet leading the way, it'd be near impossible to conceive of the neural nets having the ubiquity they do. If you were limited to CPU only, I'd be very skeptical of seeing the benefits of neural nets we see today. Neural Nets aren't necessarily better on completely even playing field, but when is the field even? Comparing a neural net running on a GPU vs a neural net on a CPU is a pointless exercise in today's data science world. Given the sheer amount of computing power a neural net can harness in a way few other algorithms can, neural nets tend to be a magnitude more complex and correspondingly, a magnitude better. In today's world of large datasets, they're making use of it the best.</p>
+<p>Without the aforementioned AlexNet leading the way, it'd be near impossible to conceive of the neural nets having the ubiquity they do. If you were limited to CPU only, I'd be very pessimisstic of seeing the benefits of neural nets we see today. Neural Nets aren't necessarily better on completely even playing field, but when is the field even? Comparing a neural net running on a GPU vs a neural net on a CPU is a pointless exercise in today's data science world. Given the sheer amount of computing power a neural net can harness in a way few other algorithms can, neural nets tend to be a magnitude more complex and correspondingly, a magnitude better. In today's world of large datasets, they're making use of it the best.</p>
 <h2>The Data</h2>
 <p>The datasets in modern data science have shifted, and this is particularly evident in image data we have. Traditional stats would have a few thousand rows and tens to hundreds of predictors. Feature selection would happen a few ways (ridge, lasso, random forests) or maybe even dimensionality reduction (PCA, autoencoders), commonly augmented with some additional domain knowledge to help direct model building. And by and large, this is still the common paradigm for many data science tasks - select useful features and start building models.</p>
 <p>But this job of feature selection fails in data that doesn't have such obvious structure. Images, text, video are examples of data that doesn't have a clear structure and despite the best efforts on NLP researchers, the success has been limited. And this is one of the areas deep learning really shines, it picks up it's own features quite well. If you're not sure about how to approach a problem, some deep learning can do most of it for you. </p>
@@ -150,7 +150,7 @@
                                             <ul class="link-list">
 
                                                 
-                                                <li><a class = "red" href="/blog/skeptical-neural-nets">Skeptical Neural Nets</a><br>Deep Learning, Convolution and the Hype Machine</li>
+                                                <li><a class = "red" href="/blog/critique-neural-nets">Critique Neural Nets</a><br>Deep Learning, Convolution and the Hype Machine</li>
 
                                                 
                                                 <li><a class = "red" href="/blog/ab-testing-bandit-methods">A/B testing / Bandit Methods</a><br>Resources and Skepticism</li>
@@ -197,7 +197,7 @@
                 </div>
                             <!-- Copyright -->
                 <div id="copyright">
-                     &copy; 2018 | Design: <a href="http://html5up.net">HTML5 UP</a> | Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>
+                     &copy; 2019 | Design: <a href="http://html5up.net">HTML5 UP</a> | Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>
                 </div>
 
 
