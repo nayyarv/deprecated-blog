@@ -1,8 +1,8 @@
-Title: Skeptical Neural Nets
+Title: Critique Neural Nets
 Subtitle: Deep Learning, Convolution and the Hype Machine
 Date: 2018-10-23 10:20
-Category: skeptical
-Tags: skeptical, ds, advice, neuralnets, neural, deeeplearning, hype
+Category: critique
+Tags: critique, ds, advice, neuralnets, neural, deeeplearning, hype
 Authors: Varun Nayyar
 
 My first neural net was actually coded up in 2009. I had decided to go to med school and while hating the degree program, I got a chance to do an elective called "Science in Medicine". I didn't really know how to program at this point, so it was done in excel and I trained a neural net (really a perceptron with 2 input units and a sigmoid activation) to mimc and NAND gate. It is a little known fact that backprop is simple enough to implement in excel. Everyone was suitably impressed (if unsure of what they were seeing), and when I quit to take up a mathematics/engineering degree 6 months later, the signs were there.
@@ -74,7 +74,7 @@ It's well known that training neural nets is embarrassingly parallel, and that G
 
 As a GPU is a bunch of streaming multiprocessors ([See my talk on PyCUDA](https://github.com/nayyarv/PyCudaIntro) for more details), it's effectively a multicore cpu where number of cores are optimised over clock speed. Anything that could take advantage of many cores would gain huge benefits. And unlike CPU makers, GPU makers still had a lot of low hanging fruit left to grab, not to mention sticking additional cores wasn't a copout. While they would improve their micro-architecture every so often, the clock rates of each streaming processor hasn't improved greatly, but the number of them increases significantly. In fact, Intel sells versions of GPUs that are packed with CPU cores instead of GPU cores.
 
-Without the aforementioned AlexNet leading the way, it'd be near impossible to conceive of the neural nets having the ubiquity they do. If you were limited to CPU only, I'd be very skeptical of seeing the benefits of neural nets we see today. Neural Nets aren't necessarily better on completely even playing field, but when is the field even? Comparing a neural net running on a GPU vs a neural net on a CPU is a pointless exercise in today's data science world. Given the sheer amount of computing power a neural net can harness in a way few other algorithms can, neural nets tend to be a magnitude more complex and correspondingly, a magnitude better. In today's world of large datasets, they're making use of it the best.
+Without the aforementioned AlexNet leading the way, it'd be near impossible to conceive of the neural nets having the ubiquity they do. If you were limited to CPU only, I'd be very pessimisstic of seeing the benefits of neural nets we see today. Neural Nets aren't necessarily better on completely even playing field, but when is the field even? Comparing a neural net running on a GPU vs a neural net on a CPU is a pointless exercise in today's data science world. Given the sheer amount of computing power a neural net can harness in a way few other algorithms can, neural nets tend to be a magnitude more complex and correspondingly, a magnitude better. In today's world of large datasets, they're making use of it the best.
 
 ## The Data
 

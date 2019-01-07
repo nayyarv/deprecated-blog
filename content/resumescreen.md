@@ -1,8 +1,8 @@
-Title: Skeptical Resume Screening
+Title: Bayesian Resume Screening
 Subtitle: Screening Resumes and Pitfalls of Bias
 Date: 2018-09-03 10:20
 Category: advice
-Tags: skeptical, ds, advice, interview, resume
+Tags: bayesian, ds, advice, interview, resume
 Authors: Varun Nayyar
 
 
@@ -26,9 +26,9 @@ Again, these are more tendencies than specifics, there'll be comp sci majors wit
 
 I love cross majors, comp sci/stats tend to give the best of both worlds in terms of foundations.
 
-### The Skepticism
+### The Doubts
 
-1. Comp Sci - are almost always obsessed with Neural Nets of all kinds. They also tend to lack a strong statistical base and many regressions and Bayesian approaches mean nothing to them. They come with strong biases and might need to unlearn a lot of them and this can be an issue. They rarely bring any skepticism to the table and are almost always overly confident about the performance of a model of theirs. There is also diminishing returns in comp sci skill in DS, the open source community puts together efficient implementations, so past a certain point, programming skill is less necessary than software architecture skill.
+1. Comp Sci - are almost always obsessed with Neural Nets of all kinds. They also tend to lack a strong statistical base and many regressions and Bayesian approaches mean nothing to them. They come with strong biases and might need to unlearn a lot of them and this can be an issue. They rarely bring any rigour to the table and are almost always overly confident about the performance of a model of theirs. There is also diminishing returns in comp sci skill in DS, the open source community puts together efficient implementations, so past a certain point, programming skill is less necessary than software architecture skill.
 2. Maths/Stats - many can barely program and require a lot of training to be useful in this field. If you're unlucky, they'll even consider programming beneath them. And they're severely constrained by their need for rigour and are very dour about their results, which means good models they build might go unnoticed. Require very careful management
 3. Engineers - tend to be middle of the road in both mathy and comp sci skills and don't really push your team forward in many ways. Over reliance on short term results can mean sacrificing longer term goals which they don't see as well. May also not get any respect from the comp sci/math majors
 4. Economics majors - they also come with awful mathematics and programming skills, and are unlikely to have the insight as they were probably stars in their own fields.
@@ -41,7 +41,7 @@ Overall, I'm mixed. PhD > undergrad, but PhD = Undergrad + 3 years experience. I
 
 PhDs mean that the person who did them is very self-directed, self motivated and has the ability to learn by themselves, all of which are great features to have in an employee. Assuming a quantitative PhD, they likely have very strong skills in this area that are likely to be of instant use to you. Additionally, given that PhDs are usually from the top undergrads, you have a guarantee that they're generally more intelligent. PhDs tend to be people you need if you're on the cutting edge and are very good for raising the ceiling of your teams ability.
 
-### The Skepticism
+### The Doubts
 
 The main problem is that a PhD doesn't really tell me that much about a person's ability to be an employee. Research and corporate environments are very different and success in one doesn't always translate. The PhD tends to be a very specific and sharp area, [see this comic](http://matt.might.net/articles/phd-school-in-pictures/) and while they've got more general skill, they're not necessarily much better than an undergrad, especially if you expect to have a bunch of different problems to solve. Additionally, the PhDs tend to be very top heavy the ones that are intelligent and have the ability to transfer skills, are likely ones to stick around in academia too. Basically a PhD applying is likely more intelligent than an undergrad, but you also know that they probably weren't the best of their cohort.
 
@@ -55,7 +55,7 @@ It's always fantastic to see a Github profile and portfolio - you instantly get 
 
 Additionally, this shows curiosity, which I consider a huge thing in a person. A curious person can be depended on to keep learning, improving and getting better. I argue a curious person with limited skill has more potential than a skilled by uninterested person. 
 
-### The Skepticism
+### The Doubt
 
 Github and Portfolio's are very biased towards comp sci type majors, either studying or working in a small firm/startup. 
 

@@ -18,8 +18,8 @@ COPYRIGHT_YEAR = datetime.now().strftime('%Y')
 # theme stuff
 
 AUTHOR = 'Varun Nayyar'
-SITENAME = 'Skeptical Learning'
-SITEDESCRIPTION = 'ML without the rose tinted lenses'
+SITENAME = 'Bayesian Learning'
+SITEDESCRIPTION = 'Pessimissm in ML'
 DEFAULT_DATE_FORMAT = "%B %-d, %Y"
 
 SITEURL = 'https://nayyarv.github.io'

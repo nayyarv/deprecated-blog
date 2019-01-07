@@ -1,8 +1,8 @@
-Title: Skeptical Data Science
+Title: Uncertain Data Science
 Subtitle: Does your business need Data Science?
 Date: 2018-09-03 10:20
 Category: advice
-Tags: skeptical, ds, advice
+Tags: uncertain, ds, advice
 Authors: Varun Nayyar
 Status: draft
 

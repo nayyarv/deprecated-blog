@@ -2,7 +2,7 @@ Title: A/B testing / Bandit Methods
 Subtitle: Resources and Skepticism
 Date: 2018-10-22 10:20
 Category: advice
-Tags: skeptical, ds, advice, ab, bandit
+Tags: critique, ds, advice, ab, bandit
 Authors: Varun Nayyar
 
 This is a short article, primarily full of resources. I assume some basic knowledge of A/B testing
@@ -17,7 +17,7 @@ I must start posting Evan Miller's articles on the subject which I consider a fa
 
 Additionally, this article on [statstical power](https://www.evanmiller.org/the-low-base-rate-problem.html) is also something worth reading as it touches on assessing significance as your click and lift is low - basically the lower the success rate is, the more samples you need to ensure that you've reached significance.
 
-### A/B Testing Summary + Skepticism
+### A/B Testing Summary + Critique
 
 1. All the approaches of A/B testing use the same tech backend. The Sequential and Bayesian approaches allow for checking the results partway through, so there is an expectation that you can check on your results every so often, and maybe even automate this part
 2. Traditional A/B testing is the most robust approach - if you use an early stop version, you run the risk of catching significance on a certain day. For example, testing a greeting that uses "Monday" performs better on monday and might show significance that wouldn't be ther when run over a period of a week.
@@ -38,7 +38,7 @@ More precisely, we set a parameter epsilon which is an indication of our explora
 
 Bandit methods are a similar response to traditional A/B testing, the question of regret. When you have a better method (say a donation webpage) that's outperforming your old one, you lose a lot of money for each day you run the A/B test. Also, if you run a lot of A/B tests, setting up and analysing at the end is always a pain, can you set you
 
-### Bandt Summary + Skepticism
+### Bandt Summary + Critique
 
 1. A more involved tech stack. While A/B testing simply records result of web A/B interaction, bandit methods need to store result of the interaction and then work out which webpage to show based on past results. Unlike a simple random call to determine which page to show, the code at the delivery layer is a bit more involved. This is likely the big issue
 2. Bandit methods are quite fragile - they rely on instant feedback to adjust the probability of returning the best value. Email campaigns or conversions that are non-instant break the fundamental assumptions of bandit methods and can lead to it acting quite erratic.
