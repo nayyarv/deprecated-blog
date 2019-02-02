@@ -68,9 +68,124 @@
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -149,12 +264,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -167,27 +290,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -383,7 +518,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -393,11 +530,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -645,6 +795,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -683,7 +836,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -805,6 +958,10 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 
 
 
@@ -821,16 +978,24 @@ div.output_unrecognized a:hover {
 }
 
 
+
+
+
 .rendered_html pre,
+
 
 
 
 .rendered_html tr,
 .rendered_html th,
 
-.rendered_html td,
 
-
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
 .rendered_html * + table {
   margin-top: 1em;
 }
@@ -846,6 +1011,11 @@ div.output_unrecognized a:hover {
 
 .rendered_html img.unconfined,
 
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
 div.text_cell {
   /* Old browsers */
   display: -webkit-box;
@@ -896,8 +1066,15 @@ h6:hover .anchor-link {
   display: none;
 }
 .text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -1036,8 +1213,7 @@ h6:hover .anchor-link {
 .ansi-bold { font-weight: bold; }
 </style><body>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>While chatting with Joe, a bloke I had met at a machine learning meet, the conversation invariably turned to how we hated interviewing and how interview candidates always throw out buzzwords and jump headfirst into problems. We then asked each other our favourite interview questions and jumped in headfirst without thinking.
 In order to defend my behaviour, I argued that the question Joe had posed was far more subtle than what Joe had suggested and this is the result.</p>
@@ -1049,8 +1225,7 @@ In order to defend my behaviour, I argued that the question Joe had posed was fa
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-Subtlety">The Subtlety<a class="anchor-link" href="#The-Subtlety">&#182;</a></h2><p>If this game had only 1 turn, you'd bet as much money as possible on the game. After all, who'd give you a 50% chance at a 300% return, or an expected return of 100% (albeit slightly risky). If this game had infinite number of turns, I would play with the minimum bet each time as my expected return is the minimum bet and the chance of going to 0 is very very rare. Note, this is also why when playing in a casino, you reduce the number of bets you make because each bet has a negative expected return.</p>
 <p>With a finite number of turns, the game changes. If I had 2 turns, betting all my money each time still seems sound since 25% of the time I'd end up 16x or 1500% return with a 25% probability - still appetizing. But nothing 75% of the time. For a game with 10 turns, I'd make a 1 million x return, but this is a 1 in 1024 chance of happening, everything else is 0. Note that my expected return is $(2^n-1)x$ using this strategy, but my median return is $-x$. As $n \rightarrow \infty$ my expected return also grows, but my chance of winning keeps decreasing. Now I don't play the lottery, and if a billionaire decides to match every dollar in the lottery with 3 of his own, I still wouldn't play the game (though I would pool money and buy as many lottery tickets as possible). So obviously, this strategy of betting everything on each toss is not something I'd want to do</p>
@@ -1059,37 +1234,32 @@ In order to defend my behaviour, I argued that the question Joe had posed was fa
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Constant-Betting-Strategy">Constant Betting Strategy<a class="anchor-link" href="#Constant-Betting-Strategy">&#182;</a></h2><p>The first time I posed this question to another, the first response I got was what was I optimizing for? It's clear that optimizing for expected value results in a bet everything each toss, but this is not a good strategy as the number of tosses increase as the chance of any payout diminishes. The next response was to bet half my stash each time so I'd never be out of the game, so I thought I'd look at various statistics for a constant $\lambda$</p>
 <p>Let $\lambda \in [0,1]$ be the percentage of our current stash $x$ to bet on the toss. Value $V$ after one toss</p>
-<p>\begin{align}
+\begin{align}
 V|Heads =&amp; (1-\lambda) x + 4 \lambda x\\
  =&amp; (1 +3 \lambda)x \\
 V|Tails =&amp; (1-\lambda) x 
-\end{align}</p>
-<p>Hence $E(V) = (1+\lambda)x$</p>
+\end{align}<p>Hence $E(V) = (1+\lambda)x$</p>
 <p>Looking at 2 tosses</p>
-<p>\begin{align}
+\begin{align}
 V|HH =&amp; (1 -\lambda)(V|H) + 4\lambda (V|H) \\
  =&amp; (1 +3 \lambda)(V|H) \\
  =&amp; (1 +3 \lambda)^2x \\
 V|HT =&amp; (1 +3 \lambda)(V|T)\\
 =&amp; (1 +3 \lambda)(1-\lambda) x
-\end{align}</p>
-<p>and</p>
-<p>\begin{align}
+\end{align}<p>and</p>
+\begin{align}
 V|TT =&amp; (1 -\lambda)(V|T) \\
  =&amp; (1 - \lambda)^2x \\
 V|TH =&amp; (1 +3 \lambda)(V|T)\\
 =&amp; (1 +3 \lambda)(1-\lambda) x
-\end{align}</p>
-<p>This should give us some intuition on the distribution. For a particular fixed strategy, i.e. constant $\lambda$, we now have a distribution given number of heads, $h$ and number of tails $t$</p>
-<p>\begin{align}
+\end{align}<p>This should give us some intuition on the distribution. For a particular fixed strategy, i.e. constant $\lambda$, we now have a distribution given number of heads, $h$ and number of tails $t$</p>
+\begin{align}
 V|H=h, T=t &amp;= (1+3\lambda)^h (1-\lambda)^t x
-\end{align}</p>
-<p>For $\lambda =1 $  we can see that even one tail results in value = 0, while $\lambda=0$ results in a value of x. This is clearly a binomial expansion, and this makes this quite easy to analyse, in that the more heads has strictly more profit for a fixed $h+t$.
+\end{align}<p>For $\lambda =1 $  we can see that even one tail results in value = 0, while $\lambda=0$ results in a value of x. This is clearly a binomial expansion, and this makes this quite easy to analyse, in that the more heads has strictly more profit for a fixed $h+t$.
 Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 </div>
@@ -1118,14 +1288,13 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
         
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the above function we do not enforce a min bet and allow the dollar to be subdivided as much as possible.</p>
 
@@ -1142,7 +1311,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 <span class="n">dat</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1152,7 +1321,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -1173,8 +1342,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we need to generate weighted statistics of the above, this is trivial for the mean, but for percentile, we'll have to write our own</p>
 
@@ -1200,7 +1368,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
     
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1213,7 +1381,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">weightedPerc</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dat</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1223,7 +1391,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -1246,7 +1414,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">weights</span><span class="o">=</span><span class="n">dat</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1256,7 +1424,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -1290,7 +1458,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 <span class="c1"># max, mean, 25%, median, 75%, 100%/max</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1300,7 +1468,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -1348,7 +1516,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
     
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1358,7 +1526,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -1371,7 +1539,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1401,7 +1569,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$\lambda$&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1411,7 +1579,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -1424,7 +1592,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1460,7 +1628,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 <span class="c1">#     print(f&quot; {percentiles[col_p-1]}%={datum[:,col_p][ind]:.2f}&quot;, end = &quot;&quot;)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1470,7 +1638,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1487,8 +1655,7 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Notes">Notes<a class="anchor-link" href="#Notes">&#182;</a></h3><p>A percentile level is not directly comparable in this setting and the percentile graph is best looked at as your range of return for a given $\lambda$. Optimizing for 75% results in your 25% case getting worse, while optimizing for your 25% case reduces your possible returns. The higher the percentile you'd like to optimize for, the higher lambda and vice versa and can be seen as a measure of risk taking.</p>
 <h2 id="Varied-$\lambda$">Varied $\lambda$<a class="anchor-link" href="#Varied-$\lambda$">&#182;</a></h2><p>So we can see that a fixed percentage playing mechanism barely taps into the possible value of the game at various percentile levels. Playing 33% of our value each time has a median value of 3.16 which feels surprisingly little given the high payout of the game.</p>
@@ -1547,16 +1714,16 @@ Let's have a look at mean, median and 25%, 75% results in this space.</p>
                                             <ul class="link-list">
 
                                                 
-                                                <li><a class = "red" href="/blog/critique-neural-nets">Critique Neural Nets</a><br>Deep Learning, Convolution and the Hype Machine</li>
+                                                <li><a class = "red" href="/blog/my-contribution-to-numpy">My Contribution to Numpy</a><br>Histograms, binwidth and the importance of communication</li>
+
+                                                
+                                                <li><a class = "red" href="/blog/a-critique-of-neural-nets">A critique of Neural Nets</a><br>Deep Learning, Convolution and the Hype Machine</li>
 
                                                 
                                                 <li><a class = "red" href="/blog/ab-testing-bandit-methods">A/B testing / Bandit Methods</a><br>Resources and Skepticism</li>
 
                                                 
                                                 <li><a class = "red" href="/blog/cartpole-q-learning">CartPole Q Learning</a><br>Using Q Learning to Play cartpole</li>
-
-                                                
-                                                <li><a class = "red" href="/blog/tosser">Tosser</a><br>Beating an Interview Question</li>
                                                 
                                             </ul>
                                         </section>                                        <section>

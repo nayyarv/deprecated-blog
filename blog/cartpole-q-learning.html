@@ -68,9 +68,124 @@
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -149,12 +264,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -167,27 +290,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -383,7 +518,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -393,11 +530,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -645,6 +795,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -683,7 +836,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -805,6 +958,10 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 
 
 
@@ -821,16 +978,24 @@ div.output_unrecognized a:hover {
 }
 
 
+
+
+
 .rendered_html pre,
+
 
 
 
 .rendered_html tr,
 .rendered_html th,
 
-.rendered_html td,
 
-
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
 .rendered_html * + table {
   margin-top: 1em;
 }
@@ -846,6 +1011,11 @@ div.output_unrecognized a:hover {
 
 .rendered_html img.unconfined,
 
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
 div.text_cell {
   /* Old browsers */
   display: -webkit-box;
@@ -896,8 +1066,15 @@ h6:hover .anchor-link {
   display: none;
 }
 .text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -1036,8 +1213,7 @@ h6:hover .anchor-link {
 .ansi-bold { font-weight: bold; }
 </style><body>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I've been learning about reinforcement learning and wonder how it can be applied in my work. A common paradigm of machine learning/data science is to develop a model that can predict and feed those predictions into relatively simple code (or into a report for humans) to make decisions. For example, a bank might use a model to predict probability of default, and use that to suggest an interest rate. In many cases, the hard part is estimating risk, once that's been worked out the decision is easy. Or a charity might look into the profile of it's donors and combine with census data to see what can be done.</p>
 <p>However, this is not always the case. Games are a fantastic example of needing to process information and then making a decision on how to react. Here the prediction problem is one aspect and optimizing for current state only isn't necessarily a good idea, we need to optimize a bit longer term. Lot's of control problems can also take reinforcement learning.</p>
@@ -1054,15 +1230,13 @@ DSSYSSR<br>
 <p>Now at the beginning, you're in state 3 and action left and action right are both of unknown reward. Let's say you go all the way to the right and get the reward. No in position 5, you know going right leads to a reward of 1. However restarting the game, position 3 still doesn't know which way to go since 4 and 2 still have no info about Q. Let's say you went right again and this time, entering state 5, you realise that the Q(5,right) = 1 while going left is still 0. Hence we know that Q(4, right) = $\gamma$. Now playing again, Q(3, left/right) = 0, but if you go right again, you realise that Q(4, right) = $\gamma$ which is better than left, so Q(3, right) = $\gamma^2$. Now the game would only go right.</p>
 <p>On the other hand, heading left towards your death results in no reward and thus, no information filters back. Setting the reward to -1 would have the same effect as driving the agent away.</p>
 <p>However, most games are not deterministic and have elements of chance. Furthermore, instead of death, there might be a reward of 2 to the left we've never checked on. As a result, we add two things. Firstly, we don't always choose the best action, we add an element of randommness using epsilon greedy (<a href="https://lilianweng.github.io/lil-log/2018/01/23/the-multi-armed-bandit-problem-and-its-solutions.html">see more of the above blog</a>) to choose a random action and we also update the Q(s,a) score a little more conservatively each time.</p>
-<p>\begin{align}
+\begin{align}
 Q_{n+1}(s,a) = Q_n(s,a) * (1-\alpha) + \alpha [r + \gamma * max_{a} Q_n(s',a)]
-\end{align}</p>
-<p>For $\alpha$ close to 1, new information changes the values we have more, and for small $\alpha$, it has less impact. Those among you might realise this can be rewritten as</p>
-<p>\begin{align}
+\end{align}<p>For $\alpha$ close to 1, new information changes the values we have more, and for small $\alpha$, it has less impact. Those among you might realise this can be rewritten as</p>
+\begin{align}
 Q_{n+1}(s,a) &amp;= \alpha \sum_n (1-\alpha)^n B_n \\
 B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
-\end{align}</p>
-<p>And noting that $\alpha \sum_{n=0} (1-\alpha)^n = 1$, the above can be treated as a weighted expectation. Smaller values of alpha bring the value closer to an unweighted expectation. Hence we can think of choosing the best action in the new state as choosing the best expected action in the new state.</p>
+\end{align}<p>And noting that $\alpha \sum_{n=0} (1-\alpha)^n = 1$, the above can be treated as a weighted expectation. Smaller values of alpha bring the value closer to an unweighted expectation. Hence we can think of choosing the best action in the new state as choosing the best expected action in the new state.</p>
 <h2 id="Implementing-Q-Learning">Implementing Q-Learning<a class="anchor-link" href="#Implementing-Q-Learning">&#182;</a></h2><p>Q-Learning has two common implementations, tabular which works well for games with finite state and Neural Q Learning which uses a neural net to convert state into rewards for various actions. Neural Q learning has been extended to DQN which uses a variety of tricks to improve it's performance (it's quite brittle as is). In neural q learning, the $\alpha $ updating isn't necessary since the neural net will look at all Q(s,a) combinations as part of it's training set. The neural net is being used as a function approximator and could be replaced by any function that can be used as an approximator (trees, k-NN etc), but in general neural nets tend to have very efficient code (GPUs) that allow an extra order of magnitude.</p>
 <p>Before we start implementing, I'm going to define an interface, so I can reuse my agent code.</p>
 
@@ -1109,14 +1283,13 @@ B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Also, let's introduce the game and agent</p>
 <h2 id="Cartpole">Cartpole<a class="anchor-link" href="#Cartpole">&#182;</a></h2><p>For the demonstration of Q-Learning, we're going to use <a href="https://gym.openai.com/envs/CartPole-v1/">OpenAI's Cartpole</a>. The Agent here is actually quite straightforward, the magic is happening in the Q function approximator.</p>
@@ -1232,14 +1405,13 @@ B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
         <span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The test window is just a progress update. The epsilon greedy algorithm just has a linear drop over training (this may not optimal, different functions or even a different approach to exploration may be better). The run section is just training with optimal action chosen and some pretty pictures.</p>
 <p>Let's define Qtable. Note the bins have been specified from sampling the env and plotting. I've also used knowledge that cart position and velocity is generally less important than pole tip and velocity. This has resulted in 4 <em> 4 </em> 29 * 8 bins which is 3.7k states.</p>
@@ -1311,7 +1483,7 @@ B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">qdict</span><span class="p">[</span><span class="n">state</span><span class="p">])</span> <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="n">mx</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1345,7 +1517,7 @@ B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not find video&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1367,7 +1539,7 @@ B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
 <span class="c1"># record, </span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1377,7 +1549,7 @@ B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1416,7 +1588,7 @@ B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ag</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1426,7 +1598,7 @@ B_n &amp;= [r + \gamma * max_{a} Q_n(s',a)]
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1647,7 +1819,7 @@ Numsteps: 200
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_video</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1657,7 +1829,7 @@ Numsteps: 200
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -1675,8 +1847,7 @@ Numsteps: 200
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This approach is heavily dependent on my discretization and the gamma and alpha values. Also depending on the epsilon change, you can get much better behaviour with a lot of tweaking.</p>
 <h2 id="Neural-Q-Learning">Neural Q Learning<a class="anchor-link" href="#Neural-Q-Learning">&#182;</a></h2><p>In this case, we use a neural net to try and predict action from state. The basic topology is we feed in the state and the neural net will predict the Q for the various actions (4 input layers and 2 output layers in this case). To do the training we feed in state, action and bellman value. The neural net will simply mask the action used to calculate the loss function.</p>
@@ -1784,7 +1955,7 @@ Numsteps: 200
         <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">qvals</span><span class="p">)</span> <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="n">mx</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1798,7 +1969,7 @@ Numsteps: 200
 <span class="n">ns</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span> <span class="n">nag</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1808,7 +1979,7 @@ Numsteps: 200
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
@@ -1819,7 +1990,7 @@ Numsteps: 200
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1858,7 +2029,7 @@ Numsteps: 200
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nag</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1868,7 +2039,7 @@ Numsteps: 200
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -1981,7 +2152,7 @@ Numsteps: 92
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_video</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -1991,7 +2162,7 @@ Numsteps: 92
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -2009,8 +2180,7 @@ Numsteps: 92
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>Hope you've enjoyed this brief intro to Q Learning.</p>
 <p>Neural Q learning is quite brittle and unstable (these things are addressed in an upgrade called DQN) compared to tabular Q in this case. We can see the neural Q get quite good, then get worse, not to mention how much slower it is. The problem with tabular q is memory size which can grow out of control in more complex problems, especially ones with limited linearity and of course, when we need to interpret from pixels/video as opposed to a much nicer number based interface.</p>
@@ -2019,14 +2189,26 @@ Numsteps: 92
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Acknowledgements">Acknowledgements<a class="anchor-link" href="#Acknowledgements">&#182;</a></h2><p>Thanks to starai (sans a website) for providing forums and lectures to kickstart this. 
 Alexander Long for providing some code skeletons to work with.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
  
 
@@ -2081,16 +2263,16 @@ Alexander Long for providing some code skeletons to work with.</p>
                                             <ul class="link-list">
 
                                                 
-                                                <li><a class = "red" href="/blog/critique-neural-nets">Critique Neural Nets</a><br>Deep Learning, Convolution and the Hype Machine</li>
+                                                <li><a class = "red" href="/blog/my-contribution-to-numpy">My Contribution to Numpy</a><br>Histograms, binwidth and the importance of communication</li>
+
+                                                
+                                                <li><a class = "red" href="/blog/a-critique-of-neural-nets">A critique of Neural Nets</a><br>Deep Learning, Convolution and the Hype Machine</li>
 
                                                 
                                                 <li><a class = "red" href="/blog/ab-testing-bandit-methods">A/B testing / Bandit Methods</a><br>Resources and Skepticism</li>
 
                                                 
                                                 <li><a class = "red" href="/blog/cartpole-q-learning">CartPole Q Learning</a><br>Using Q Learning to Play cartpole</li>
-
-                                                
-                                                <li><a class = "red" href="/blog/tosser">Tosser</a><br>Beating an Interview Question</li>
                                                 
                                             </ul>
                                         </section>                                        <section>
