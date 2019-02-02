@@ -33,7 +33,7 @@ TIMEZONE = 'Australia/Sydney'
 DEFAULT_LANG = 'en'
 
 # this is to make jupyter notebooks an accessible category
-MARKUP = ('md', 'ipynb')
+MARKUP = ('md')
 PLUGIN_PATHS = ['/Users/varun/Documents/github/pelicanplugins']
 PLUGINS = ['ipynb.markup']
 IPYNB_USE_METACELL = True
