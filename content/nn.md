@@ -1,4 +1,4 @@
-Title: Critique Neural Nets
+Title: A critique of Neural Nets
 Subtitle: Deep Learning, Convolution and the Hype Machine
 Date: 2018-10-23 10:20
 Category: critique
