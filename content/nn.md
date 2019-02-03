@@ -1,4 +1,4 @@
-Title: A critique of Neural Nets
+Title: A Bayesian's view on Neural Nets
 Subtitle: Deep Learning, Convolution and the Hype Machine
 Date: 2018-10-23 10:20
 Category: critique
@@ -98,3 +98,10 @@ Without Yann LeCunn's famous (but ultimately confusing with context) "Deep Learn
 Problems with Deep Learning have become apparent, and primarily as people have become more well versed in it, they've also become more well-versed with it's limitations. The standard scientific approach of making big claims that get disproved in subsequent publications still holds even in Deep Learning and the twitter verse. The very hype driven nature of this field means that successes are shouted from all over while the embarrassing failures are hidden away (self driving car crashes aside). The fact that most of the research is being driven by large corporations (Baidu, Facebook etc) also represents a change in how machine learning has been advanced, and only exacerbated the hype machine without the pessimissim that academics level at anything daring to call itself 'new'.
 
 Deep learning has definitely been revolutionary in the image/video space and will definitely stick around for a long time there (and likely other fields like language processing), until something new and well named comes along and displaces it. Nothing ever lives up to it's own hype after all, and frankly speaking, Deep Learning and Neural Nets haven't done too bad. For people in the field, neural nets are something we should know, but not to the exclusion of everything else, and it shouldn't be the only hammer in our toolkit (lest everything starts to look like a nail). As hype machines find new areas (I bet reinforcement learning is gonna up it's hype game), we need to constantly throw away most of what we know and start again, likely multiple times for each hype machine, and it's our foundations that allow us to approach new topics, pick up new things and work out how to apply new approaches to new problems, lest be become one trick pony.
+
+## Aside: Bayesian Neural Nets
+
+No discussion is complete without a Bayesian take on Neural Nets. That is a future topic and one I'm somewhat well versed in, having based my thesis in part on Radford Neal's Bayesian Neural Nets PhD. We're at the forefront of a resurgence in Bayesian Methods, which too deserves it's own post, but I'm going to leave a couple of papers to whet your appetites
+
+1. Bayes By Backprop, or [Weight Uncertainty in Neural Networks](https://arxiv.org/pdf/1505.05424.pdf) - a very easy to follow paper that allows for distribution backprop to make 
+2. Radford Neal's PhD, [Bayesian Learning for Neural Networks](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.446.9306&rep=rep1&type=pdf) - Radford Neal is probably the professor I'd want to do a PhD under.  Among other things, he has developed his own branch of R, called pqR that is significantly better and I follow his blog to give myself a better understanding of language design fundamentals. This thesis (supervised by Geoff Hinton) is what I consider a foundational paper in this space, and while not perfect, is definitely incredibly influential. It's a little dense and uses a horrible font, but I think it's a very valuable resource to get a good understanding of Bayesian Neural Nets.
