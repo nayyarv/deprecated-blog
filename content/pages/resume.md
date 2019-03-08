@@ -2,15 +2,22 @@ Title: Resume
 
 ## WORK EXPERIENCE
 
-### Data Scientist (Contract), Oct 2018 - Jan 2019
-Sen. Di Natale’s Office, Australian Greens
+### Senior Machine Learning Engineer, Dec 2018 - Present
+#### Advanced Technology Group, Dolby Labs, Sydney
 
- - Built LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
+- Slashed training time from a 5 days to 30 minutes by porting modelling to GPU compatible code and improving training algorithms
+- Ported CTC loss to Julia for unsupervised voice recognition modelling with existing model framework
+- Championed separation of training code and deployment code to allow for greater flexibility and in recognition of differing constraints.
+
+### Data Scientist (Contract), Oct 2018 - Dec 2018
+#### Sen. Di Natale’s Office, Australian Greens
+
+ - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
  - Educated key stakeholders on the capabilities of Data Science, leading to more trust and reliance in data science methods when developing policy and campaign strategy.
  - Founded a volunteer Data Science group to provide data science manpower to party leadership and set up longer term projects based on census and voter contact data.
 
 ### Operations Research Analyst, Jan 2016 - Apr 2018
-Hudson River Trading (Singapore)
+#### Hudson River Trading, Singapore
 
 Improving trading control AI’s decision making processes with machine learning
 
@@ -29,29 +36,82 @@ Marvellous Questions
 
 ## EDUCATION
 
-BEng(Electrical, Honours) & BSci(Statistics, Honours), 
+BEng(Electrical, Honours) & BSci(Statistics, Honours)
+
 UNSW 2010-2015
+
  - Faculty of Engineering Dean’s Award (Top 2% in cohort) — 2011,12,13,14
  - Faculty of Science Research Scholarship, $3800.
  - International Student Exchange Scholarship, $5000 - University of California SD
- - HD Average (87.2)
+ - High Distinction Average (87.2)
+
+### Thesis - Engineering 
+Machine Learning, Honours Year 2014
+
+- Developed novel technique for emotion recognition by applying Bayesian Inference to GMMs. Technique was more robust when tested on IEMOCAP and LDC corpuses.
+- Researched and developed MCMC algorithms for use in high dimension spaces with automated 
+- Implemented expensive likelihood evaluation in CUDA and interfaced it to Python. [Github]
+(https://github.com/nayyarv/MonteGMM)
+
+### Thesis - Statstics
+Bayesian Inference, Honours Year 2015
+
+- Proposed novel sampling scheme to handle contamination models with expensive likelihoods using Approximate Bayesian Computations (ABCs).
+- Proved performance on simplified population datasets with R.
+- Derived error bounds and theoretical ROC curves of the sampling method.
 
 ## OPEN SOURCE
 
- - [Numpy Contribution PR #6029](https://github.com/numpy/numpy/pull/6029) - Automatic number of bins for np.histogram, released in numpy v1.11. Major fixes in [#6288](https://github.com/numpy/numpy/pull/6288)/[#7243](https://github.com/numpy/numpy/pull/7243) and minor fixes in [#10739](https://github.com/numpy/numpy/pull/10739).
- - [Abstract Syntax Tree Tail Recursion](https://github.com/nayyarv/python-tailrec) - AST manipulation in Python.
- - [Rethinking PR #152](https://github.com/rmcelreath/rethinking/pull/152) - adding tidyverse compatibility with improved inheritance checking.
+ - [Numpy Contribution PR #6029](https://github.com/numpy/numpy/pull/6029) - Automatic number of bins for `np.histogram`, released in numpy v1.11. Major fixes in [#6288](https://github.com/numpy/numpy/pull/6288)/[#7243](https://github.com/numpy/numpy/pull/7243) and minor fixes in [#10739](https://github.com/numpy/numpy/pull/10739) and support in issue trackers.
+ - [Abstract Syntax Tree Tail Recursion](https://github.com/nayyarv/python-tailrec) - AST manipulation in Python to optimise a tail recursive call into a loop.
+ - [Rethinking PR #152](https://github.com/rmcelreath/rethinking/pull/152) - adding tidyverse compatibility with improved inheritance checking to the `rethinking` library.
 
 ## TALKS
 
- - GPU Acceleration with CUDA - Talk presented at Sydney Python August 2018.
- - Binary Ops in Cpython - Talk presented at Sydney Python January 2019.
- - inteRnals - advanced look at GNU R, presented at Sydney Users of R, TBD
+ - [GPU Acceleration with CUDA](https://github.com/nayyarv/PyCudaIntro) - Talk presented at Sydney Python August 2018 about CUDA architecture and development.
+ - [Hacking Binary Ops in Cpython](https://github.com/nayyarv/CpythonLookingGlass) - Talk presented at Sydney Python January 2019 about Cpython Source Code.
  - Why you should learn Bayesian Inference - presented to Sydney Data Science, March 2019
- - ML Skill Decay - how your skills decay by the market making it more accessible, presented to Data Science Breakfast, TBD
+ - [inteRnals](https://github.com/nayyarv/inteRnals) - advanced look at GNU R, presented at Sydney Users of R, May 2019
+ - ML Skill Decay - how your skills decay by the market making it more accessible, presented to Data Science Breakfast, April 2019
 
 
-## ARTICLES
+## BLOG ARTICLES
 
 - [Reinforcement Learning](https://nayyarv.github.io/blog/cartpole-q-learning) - Neural Q Learning applied to OpenAi Cartpole.
 - [Tosser](https://nayyarv.github.io/blog/tosser) - How to play a game with E(X) -> infinity, while p(X>0) -> 0.
+- [Contributing to Numpy](https://nayyarv.github.io/blog/my-contribution-to-numpy) - about my PR referenced above
+
+### SKILLS
+
+- Clustering - GMMs, KMeans, Spectral Clustering, DBScan
+- Classification - Bagging, Boosting (Catboost, XGBoost), SVMs
+- Bayesian Inference - MCMC (Stan), Variational Bayes (BayesPy), pyro, edward
+- Neural Networks / Deep Learning - tensorflow, pytorch, keras [blog post](https://nayyarv.github.io/blog/a-bayesians-view-on-neural-nets)
+- Regression - LASSO, Ridge, ordinal logistic, multinomial, GLMs
+- Dimensionality Reduction - PCA, Autoencoders 
+- Reinforcement Learning - Q learning, policy gradients, actor critic
+- Databases - SQL (Postgres, MySQL), NoSQL (Redis, Mongo)
+- Programming - Python, R, C, CUDA, Julia, Haskell
+- Deployment Analytics - Bandit Methods, A/B/n testing [(blog post)](https://nayyarv.github.io/blog/ab-testing-bandit-methods)
+- Distributed Programming - Sched (HRT), Spark
+
+
+### ADDITIONAL EXPERIENCE
+
+### Data Scientist, Apr 2015 - Aug 2015
+UNSW Learning and Teaching Unit
+
+- Discovered at-risk students by using unsupervised clustering on test behaviour.
+- Analysed course comments using NLP to identify poorly received modules.
+
+### R&D Engineer, Jan 2015 - Mar 2015
+Buildings Alive  
+Startup developing innovative modelling to increase energy efficiency in offices
+- Slashed manpower costs and R&D deployment time by moving development to python and integrating with existing Java frontend using protocol buffers.
+- Championed sensor scraping system to augment energy modelling by deploying Raspberry Pis running sMAP to contracted office buildings. 
+
+### Machine Learning Intern, Dec 2012 - Feb 2013
+Cochlear
+- Trained Neural Response models on 200,000 measurements and fed into Classification Tree  to allow for automated calibration of Cochlear Implant.
+- Raised accuracy and speed of algorithm by 25% while improving robustness.
+
