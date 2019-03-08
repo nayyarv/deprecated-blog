@@ -3,22 +3,21 @@ Title: Resume
 ## WORK EXPERIENCE
 
 ### Senior Machine Learning Engineer, Dec 2018 - Present
-#### Advanced Technology Group, Dolby Labs, Sydney
+Advanced Technology Group, Dolby Labs, Sydney
 
 - Slashed training time from a 5 days to 30 minutes by porting modelling to GPU compatible code and improving training algorithms
 - Ported CTC loss to Julia for unsupervised voice recognition modelling with existing model framework
 - Championed separation of training code and deployment code to allow for greater flexibility and in recognition of differing constraints.
 
 ### Data Scientist (Contract), Oct 2018 - Dec 2018
-#### Sen. Di Natale’s Office, Australian Greens
+Sen. Di Natale's Office, Australian Parliament
 
  - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
  - Educated key stakeholders on the capabilities of Data Science, leading to more trust and reliance in data science methods when developing policy and campaign strategy.
  - Founded a volunteer Data Science group to provide data science manpower to party leadership and set up longer term projects based on census and voter contact data.
 
 ### Operations Research Analyst, Jan 2016 - Apr 2018
-#### Hudson River Trading, Singapore
-
+Hudson River Trading, Singapore  
 Improving trading control AI’s decision making processes with machine learning
 
  - Reduced FPGA downtime from 10 min to 1 min by training a pricing model to assess impact to PNL and a system to automatically handle failure, improving PNL by 1%.
@@ -36,8 +35,7 @@ Marvellous Questions
 
 ## EDUCATION
 
-BEng(Electrical, Honours) & BSci(Statistics, Honours)
-
+### BEng(Electrical, Honours) & BSci(Statistics, Honours)
 UNSW 2010-2015
 
  - Faculty of Engineering Dean’s Award (Top 2% in cohort) — 2011,12,13,14
@@ -81,12 +79,12 @@ Bayesian Inference, Honours Year 2015
 - [Tosser](https://nayyarv.github.io/blog/tosser) - How to play a game with E(X) -> infinity, while p(X>0) -> 0.
 - [Contributing to Numpy](https://nayyarv.github.io/blog/my-contribution-to-numpy) - about my PR referenced above
 
-### SKILLS
+## SKILLS
 
 - Clustering - GMMs, KMeans, Spectral Clustering, DBScan
 - Classification - Bagging, Boosting (Catboost, XGBoost), SVMs
 - Bayesian Inference - MCMC (Stan), Variational Bayes (BayesPy), pyro, edward
-- Neural Networks / Deep Learning - tensorflow, pytorch, keras [blog post](https://nayyarv.github.io/blog/a-bayesians-view-on-neural-nets)
+- Neural Networks / Deep Learning - tensorflow, pytorch, keras [(blog post)](https://nayyarv.github.io/blog/a-bayesians-view-on-neural-nets)
 - Regression - LASSO, Ridge, ordinal logistic, multinomial, GLMs
 - Dimensionality Reduction - PCA, Autoencoders 
 - Reinforcement Learning - Q learning, policy gradients, actor critic
@@ -96,7 +94,7 @@ Bayesian Inference, Honours Year 2015
 - Distributed Programming - Sched (HRT), Spark
 
 
-### ADDITIONAL EXPERIENCE
+## ADDITIONAL EXPERIENCE
 
 ### Data Scientist, Apr 2015 - Aug 2015
 UNSW Learning and Teaching Unit
@@ -106,12 +104,14 @@ UNSW Learning and Teaching Unit
 
 ### R&D Engineer, Jan 2015 - Mar 2015
 Buildings Alive  
+
 Startup developing innovative modelling to increase energy efficiency in offices
 - Slashed manpower costs and R&D deployment time by moving development to python and integrating with existing Java frontend using protocol buffers.
 - Championed sensor scraping system to augment energy modelling by deploying Raspberry Pis running sMAP to contracted office buildings. 
 
 ### Machine Learning Intern, Dec 2012 - Feb 2013
 Cochlear
+
 - Trained Neural Response models on 200,000 measurements and fed into Classification Tree  to allow for automated calibration of Cochlear Implant.
 - Raised accuracy and speed of algorithm by 25% while improving robustness.
 
