@@ -5,16 +5,22 @@ Title: Resume
 ### Senior Machine Learning Engineer, Dec 2018 - Present
 Advanced Technology Group, Dolby Labs, Sydney
 
-- Slashed training time from a 5 days to 30 minutes by porting modelling to GPU compatible code and improving training algorithms
-- Ported CTC loss to Julia for unsupervised voice recognition modelling with existing model framework
-- Championed separation of training code and deployment code to allow for greater flexibility and in recognition of differing constraints.
+- Slashed training time from a 5 days to 30 minutes by porting DNN model to GPU compatible code and using more efficient optimisation algorithms.
+- Championed separation of training and deployment code to allow for greater flexibility, in recognition of differing constraints and requirements for each task.
 
 ### Data Scientist (Contract), Oct 2018 - Dec 2018
 Sen. Di Natale's Office, Australian Parliament
 
  - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
  - Educated key stakeholders on the capabilities of Data Science, leading to more trust and reliance in data science methods when developing policy and campaign strategy.
- - Founded a volunteer Data Science group to provide data science manpower to party leadership and set up longer term projects based on census and voter contact data.
+
+
+### Co-Founder & CTO, Jun 2018 - Sep 2018
+Marvellous Questions
+
+ - Startup providing Crypto Futures Hedging as a service to retail and merchants.
+ - Trained futures hedging algorithms based on historical price ratios, with robust performance in simulated trading environments with generated transaction data.
+ - Built robust and quick python REST and WebSocket market data feeds for bitfinex, bimex, coinbase, gemini, kraken and LROS, and CBOE via Interactive Brokers.
 
 ### Operations Research Analyst, Jan 2016 - Apr 2018
 Hudson River Trading, Singapore  
@@ -24,13 +30,6 @@ Improving trading control AI’s decision making processes with machine learning
  - Initiated metadata collection of AI  jobs and processes and developed system to automatically analyse failures to effectively direct improvements.
  - Rebuilt the automated Corporate Actions system while improving speed, accuracy and robustness, allowing automated trading to take advantage of the volatility surrounding CAs.
  - Achieved consensus among team to develop new style guide with an increased line length and spearheaded documentation efforts to reduce technical debt.
-
-### Co-Founder & CTO, Jun 2018 - Sep 2018
-Marvellous Questions
-
- - Startup providing Crypto Futures Hedging as a service to retail and merchants.
- - Trained futures hedging algorithms based on historical price ratios, with robust performance in simulated trading environments with generated transaction data.
- - Built robust and quick python REST and WebSocket market data feeds for bitfinex, bimex, coinbase, gemini, kraken and LROS, and CBOE via Interactive Brokers.
 
 
 ## EDUCATION
