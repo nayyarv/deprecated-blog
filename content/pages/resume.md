@@ -5,10 +5,12 @@ Title: Resume
 ### Senior Machine Learning Engineer, Dec 2018 - Present
 Advanced Technology Group, Dolby Labs, Sydney
 
-- Slashed training time from a 5 days to 30 minutes by porting DNN model to GPU compatible code and using more efficient optimisation algorithms.
+- Developing wakeword and speech recognition technology for use with Dolby devices.
+- Slashed training time from a 5 days to 30 minutes by porting Julia codebase to CUDA including an implementation of CTC loss. This enabled more complex model builds and faster experimentation which yielded better results.
+- Determined the relationship between Baum Welch and CTC to guide efforts for multi-accent training.
 - Championed separation of training and deployment code to allow for greater flexibility, in recognition of differing constraints and requirements for each task.
 
-### Data Scientist (Contract), Oct 2018 - Dec 2018
+### Data Scientist (Contract & Volunteer), Oct 2018 - Dec 2018
 Sen. Di Natale's Office, Australian Parliament
 
  - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
@@ -43,7 +45,7 @@ UNSW 2010-2015
  - High Distinction Average (87.2)
 
 ### Thesis - Engineering 
-Machine Learning, Honours Year 2014
+Machine Learning, Honours/Masters Year 2014
 
 - Developed novel technique for emotion recognition by applying Bayesian Inference to GMMs. Technique was more robust when tested on IEMOCAP and LDC corpuses.
 - Researched and developed MCMC algorithms for use in high dimension spaces with automated 
@@ -51,7 +53,7 @@ Machine Learning, Honours Year 2014
 (https://github.com/nayyarv/MonteGMM)
 
 ### Thesis - Statstics
-Bayesian Inference, Honours Year 2015
+Bayesian Inference, Honours/Masters Year 2015
 
 - Proposed novel sampling scheme to handle contamination models with expensive likelihoods using Approximate Bayesian Computations (ABCs).
 - Proved performance on simplified population datasets with R.
@@ -65,11 +67,11 @@ Bayesian Inference, Honours Year 2015
 
 ## TALKS
 
- - [GPU Acceleration with CUDA](https://github.com/nayyarv/PyCudaIntro) - Talk presented at Sydney Python August 2018 about CUDA architecture and development.
- - [Hacking Binary Ops in Cpython](https://github.com/nayyarv/CpythonLookingGlass) - Talk presented at Sydney Python January 2019 about Cpython Source Code.
- - Why you should learn Bayesian Inference - presented to Sydney Data Science, March 2019
- - [inteRnals](https://github.com/nayyarv/inteRnals) - advanced look at GNU R, presented at Sydney Users of R, May 2019
- - ML Skill Decay - how your skills decay by the market making it more accessible, presented to Data Science Breakfast, April 2019
+ - [GPU Acceleration with CUDA and Python](https://github.com/nayyarv/PyCudaIntro), [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyzcbpc/) - Talk presented at Sydney Python August 2018 about CUDA architecture and development.
+ - [Hacking Binary Ops in CPython](https://github.com/nayyarv/CpythonLookingGlass), [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyxkbjc/) - Talk presented at Sydney Python January 2019 about Cpython Source Code.
+ - [The What, Why and How of Bayesian Inference](https://docs.google.com/presentation/d/e/2PACX-1vSykBSh072plEpk61jQvznUdNzS6MCpNYPltzDmxr4A0AOCkFVTtJfK3UqusuCDwParywF7sPwemIds/pub?start=false&loop=false&delayms=3000), [Video](https://www.youtube.com/watch?v=A9r8C2GFR4k), [Event Link](https://www.meetup.com/Data-Science-Sydney/events/259627528/) - presented to Sydney Data Science, March 2019
+ - [inteRnals](https://github.com/nayyarv/inteRnals) - advanced look at GNU R, presented at Sydney Users of R, May 2019.
+ - [DSAi Rethinking](https://dsai.org.au/courses/01-dsai-study-bayesian-inference-statistical-rethinking/) - Ran 5 week Bayesian Rethinking Study Group, April-May 2019
 
 
 ## BLOG ARTICLES
