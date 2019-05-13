@@ -11,16 +11,15 @@ Advanced Technology Group, Dolby Labs, Sydney
 - Championed separation of training and deployment code to allow for greater flexibility, in recognition of differing constraints and requirements for each task.
 
 ### Data Scientist (Contract & Volunteer), Oct 2018 - Dec 2018
-Sen. Di Natale's Office, Australian Parliament
+Sen. Di Natale's Office (Australian Greens), Australian Parliament
 
  - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
  - Educated key stakeholders on the capabilities of Data Science, leading to more trust and reliance in data science methods when developing policy and campaign strategy.
 
-
 ### Co-Founder & CTO, Jun 2018 - Sep 2018
-Marvellous Questions
-
- - Startup providing Crypto Futures Hedging as a service to retail and merchants.
+Marvellous Questions  
+Startup providing Crypto Futures Hedging as a service to retail and merchants.
+ 
  - Trained futures hedging algorithms based on historical price ratios, with robust performance in simulated trading environments with generated transaction data.
  - Built robust and quick python REST and WebSocket market data feeds for bitfinex, bimex, coinbase, gemini, kraken and LROS, and CBOE via Interactive Brokers.
 
@@ -32,6 +31,22 @@ Improving trading control AI’s decision making processes with machine learning
  - Initiated metadata collection of AI  jobs and processes and developed system to automatically analyse failures to effectively direct improvements.
  - Rebuilt the automated Corporate Actions system while improving speed, accuracy and robustness, allowing automated trading to take advantage of the volatility surrounding CAs.
  - Achieved consensus among team to develop new style guide with an increased line length and spearheaded documentation efforts to reduce technical debt.
+
+## TALKS
+
+ - [GPU Acceleration with CUDA and Python](https://github.com/nayyarv/PyCudaIntro), [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyzcbpc/) - Talk presented at Sydney Python August 2018 about CUDA architecture and development.
+ - [Hacking Binary Ops in CPython](https://github.com/nayyarv/CpythonLookingGlass), [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyxkbjc/) - Talk presented at Sydney Python January 2019 about CPython Source Code.
+ - [The What, Why and How of Bayesian Inference](https://docs.google.com/presentation/d/e/2PACX-1vSykBSh072plEpk61jQvznUdNzS6MCpNYPltzDmxr4A0AOCkFVTtJfK3UqusuCDwParywF7sPwemIds/pub?start=false&loop=false&delayms=3000), [Video](https://www.youtube.com/watch?v=A9r8C2GFR4k), [Event Link](https://www.meetup.com/Data-Science-Sydney/events/259627528/) - presented to Sydney Data Science, March 2019
+ - [inteRnals](https://github.com/nayyarv/inteRnals) - advanced look at GNU R, presented at Sydney Users of R, May 2019.
+ - [DSAi Rethinking](https://dsai.org.au/courses/01-dsai-study-bayesian-inference-statistical-rethinking/) - Ran 5 week Bayesian Rethinking Study Group, April-May 2019
+ - [Bayesian Modelling with Tensorflow Probability](https://www.meetup.com/en-AU/DeepSchool-io/events/260753939/) - Introduction to Bayesian Linear Models with TFP.
+
+
+## OPEN SOURCE
+
+ - [Numpy Contribution PR #6029](https://github.com/numpy/numpy/pull/6029) - Automatic number of bins for `np.histogram`, released in numpy v1.11. Major fixes in [#6288](https://github.com/numpy/numpy/pull/6288)/[#7243](https://github.com/numpy/numpy/pull/7243) and minor fixes in [#10739](https://github.com/numpy/numpy/pull/10739) and support in issue trackers.
+ - [Abstract Syntax Tree Tail Recursion](https://github.com/nayyarv/python-tailrec) - AST manipulation in Python to optimise a tail recursive call into a loop.
+ - [Rethinking PR #152](https://github.com/rmcelreath/rethinking/pull/152) - adding tidyverse compatibility with improved inheritance checking to the `rethinking` library.
 
 
 ## EDUCATION
@@ -59,26 +74,12 @@ Bayesian Inference, Honours/Masters Year 2015
 - Proved performance on simplified population datasets with R.
 - Derived error bounds and theoretical ROC curves of the sampling method.
 
-## OPEN SOURCE
-
- - [Numpy Contribution PR #6029](https://github.com/numpy/numpy/pull/6029) - Automatic number of bins for `np.histogram`, released in numpy v1.11. Major fixes in [#6288](https://github.com/numpy/numpy/pull/6288)/[#7243](https://github.com/numpy/numpy/pull/7243) and minor fixes in [#10739](https://github.com/numpy/numpy/pull/10739) and support in issue trackers.
- - [Abstract Syntax Tree Tail Recursion](https://github.com/nayyarv/python-tailrec) - AST manipulation in Python to optimise a tail recursive call into a loop.
- - [Rethinking PR #152](https://github.com/rmcelreath/rethinking/pull/152) - adding tidyverse compatibility with improved inheritance checking to the `rethinking` library.
-
-## TALKS
-
- - [GPU Acceleration with CUDA and Python](https://github.com/nayyarv/PyCudaIntro), [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyzcbpc/) - Talk presented at Sydney Python August 2018 about CUDA architecture and development.
- - [Hacking Binary Ops in CPython](https://github.com/nayyarv/CpythonLookingGlass), [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyxkbjc/) - Talk presented at Sydney Python January 2019 about Cpython Source Code.
- - [The What, Why and How of Bayesian Inference](https://docs.google.com/presentation/d/e/2PACX-1vSykBSh072plEpk61jQvznUdNzS6MCpNYPltzDmxr4A0AOCkFVTtJfK3UqusuCDwParywF7sPwemIds/pub?start=false&loop=false&delayms=3000), [Video](https://www.youtube.com/watch?v=A9r8C2GFR4k), [Event Link](https://www.meetup.com/Data-Science-Sydney/events/259627528/) - presented to Sydney Data Science, March 2019
- - [inteRnals](https://github.com/nayyarv/inteRnals) - advanced look at GNU R, presented at Sydney Users of R, May 2019.
- - [DSAi Rethinking](https://dsai.org.au/courses/01-dsai-study-bayesian-inference-statistical-rethinking/) - Ran 5 week Bayesian Rethinking Study Group, April-May 2019
-
 
 ## BLOG ARTICLES
 
 - [Reinforcement Learning](https://nayyarv.github.io/blog/cartpole-q-learning) - Neural Q Learning applied to OpenAi Cartpole.
 - [Tosser](https://nayyarv.github.io/blog/tosser) - How to play a game with E(X) -> infinity, while p(X>0) -> 0.
-- [Contributing to Numpy](https://nayyarv.github.io/blog/my-contribution-to-numpy) - about my PR referenced above
+- [Contributing to Numpy](https://nayyarv.github.io/blog/my-contribution-to-numpy) - about my PR referenced above.
 
 ## SKILLS
 
