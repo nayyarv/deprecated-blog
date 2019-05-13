@@ -34,9 +34,9 @@ Improving trading control AI’s decision making processes with machine learning
 
 ## TALKS
 
- - [GPU Acceleration with CUDA and Python](https://github.com/nayyarv/PyCudaIntro), [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyzcbpc/) - Talk presented at Sydney Python August 2018 about CUDA architecture and development.
- - [Hacking Binary Ops in CPython](https://github.com/nayyarv/CpythonLookingGlass), [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyxkbjc/) - Talk presented at Sydney Python January 2019 about CPython Source Code.
- - [The What, Why and How of Bayesian Inference](https://docs.google.com/presentation/d/e/2PACX-1vSykBSh072plEpk61jQvznUdNzS6MCpNYPltzDmxr4A0AOCkFVTtJfK3UqusuCDwParywF7sPwemIds/pub?start=false&loop=false&delayms=3000), [Video](https://www.youtube.com/watch?v=A9r8C2GFR4k), [Event Link](https://www.meetup.com/Data-Science-Sydney/events/259627528/) - presented to Sydney Data Science, March 2019
+ - [GPU Acceleration with CUDA and Python](https://github.com/nayyarv/PyCudaIntro) | [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyzcbpc/) - Talk presented at Sydney Python August 2018 about CUDA architecture and development.
+ - [Hacking Binary Ops in CPython](https://github.com/nayyarv/CpythonLookingGlass) | [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyxkbjc/) - Talk presented at Sydney Python January 2019 about CPython Source Code.
+ - [The What, Why and How of Bayesian Inference](https://docs.google.com/presentation/d/e/2PACX-1vSykBSh072plEpk61jQvznUdNzS6MCpNYPltzDmxr4A0AOCkFVTtJfK3UqusuCDwParywF7sPwemIds/pub?start=false&loop=false&delayms=3000) | [Video](https://www.youtube.com/watch?v=A9r8C2GFR4k) | [Event Link](https://www.meetup.com/Data-Science-Sydney/events/259627528/) - presented to Sydney Data Science, March 2019
  - [inteRnals](https://github.com/nayyarv/inteRnals) - advanced look at GNU R, presented at Sydney Users of R, May 2019.
  - [DSAi Rethinking](https://dsai.org.au/courses/01-dsai-study-bayesian-inference-statistical-rethinking/) - Ran 5 week Bayesian Rethinking Study Group, April-May 2019
  - [Bayesian Modelling with Tensorflow Probability](https://www.meetup.com/en-AU/DeepSchool-io/events/260753939/) - Introduction to Bayesian Linear Models with TFP.
