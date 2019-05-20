@@ -5,16 +5,17 @@ Title: Resume
 ### Senior Machine Learning Engineer, Dec 2018 - Present
 Advanced Technology Group, Dolby Labs, Sydney
 
-- Developing wakeword and speech recognition technology for use with Dolby devices.
+- Developing SOTA speech recognition technology for use with Dolby devices and services.
 - Slashed training time from a 5 days to 30 minutes by porting Julia codebase to CUDA including an implementation of CTC loss. This enabled more complex model builds and faster experimentation which yielded better results.
-- Determined the relationship between Baum Welch and CTC to guide efforts for multi-accent training.
 - Championed separation of training and deployment code to allow for greater flexibility, in recognition of differing constraints and requirements for each task.
+- Determined the relationship between Baum Welch and CTC to educate colleagues and guided efforts for multi-accent training with mixed corpora. 
 
 ### Data Scientist (Contract & Volunteer), Oct 2018 - Dec 2018
 Sen. Di Natale's Office (Australian Greens), Australian Parliament
 
  - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
  - Educated key stakeholders on the capabilities of Data Science, leading to more trust and reliance in data science methods when developing policy and campaign strategy.
+ - Founded a volunteer Data Science group to provide data science manpower to party leadership and set up longer term projects based on census and voter contact data.
 
 ### Co-Founder & CTO, Jun 2018 - Sep 2018
 Marvellous Questions  
@@ -22,6 +23,8 @@ Startup providing Crypto Futures Hedging as a service to retail and merchants.
  
  - Trained futures hedging algorithms based on historical price ratios, with robust performance in simulated trading environments with generated transaction data.
  - Built robust and quick python REST and WebSocket market data feeds for bitfinex, bimex, coinbase, gemini, kraken and LROS, and CBOE via Interactive Brokers.
+ - Wrote and iterated business plan in consultation wth advisors and potential financiers and led presentations to interested parties to help develop the idea further.
+
 
 ### Operations Research Analyst, Jan 2016 - Apr 2018
 Hudson River Trading, Singapore  
@@ -107,7 +110,7 @@ UNSW Learning and Teaching Unit
 ### R&D Engineer, Jan 2015 - Mar 2015
 Buildings Alive  
 
-Startup developing innovative modelling to increase energy efficiency in offices
+- Startup developing innovative modelling to increase energy efficiency in offices
 - Slashed manpower costs and R&D deployment time by moving development to python and integrating with existing Java frontend using protocol buffers.
 - Championed sensor scraping system to augment energy modelling by deploying Raspberry Pis running sMAP to contracted office buildings. 
 
