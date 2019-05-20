@@ -26,7 +26,7 @@
     &lt;span class="p"&gt;},&lt;/span&gt;
     &lt;span class="n"&gt;exclude&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="s2"&gt;&amp;quot;build&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="s2"&gt;&amp;quot;Opal.jl/deps/downloads&amp;quot;&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;downloads&amp;quot;&lt;/span&gt;
     &lt;span class="p"&gt;},&lt;/span&gt;
     &lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
        &lt;span class="n"&gt;identityFile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;

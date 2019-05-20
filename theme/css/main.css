@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,300,200");
 @import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200");
 
 /*
@@ -1074,7 +1075,7 @@
 		background: #D4D9DD url("images/bg03.jpg");
 		color: #474f51;
 		font-size: 14pt;
-		font-family: 'Yanone Kaffeesatz';
+		font-family: 'Lato';
 		line-height: 1.85em;
 		font-weight: 300;
 	}
@@ -1082,18 +1083,18 @@
 	input, textarea, select {
 		color: #474f51;
 		font-size: 12pt;
-		font-family: 'Yanone Kaffeesatz';
+		font-family: 'Lato';
 		line-height: 1.85em;
 		font-weight: 300;
 	}
 
 	p, dl {
-		margin: 0 0 0.5em 0;
+		margin: 0 0 0.25em 0;
 	}
 
 
 	ol, ul {
-		margin: 0.5em 0 0.5em 1em;
+		margin: 0.25em 0 0.5em 1em;
 	}
 
 	li {
@@ -1338,6 +1339,7 @@
 					#header h1 a {
 						color: #fff;
 						text-decoration: none;
+						font-family: 'Yanone Kaffeesatz';
 					}
 
 				#header nav {
@@ -1418,7 +1420,7 @@
 			#content h3 {
 				color: #96a9b5;
 				font-size: 1.25em;
-				margin: 0.25em 0 0em 0;
+				margin: 0.5em 0 0em 0;
 
 			}
 			#content h4 {
@@ -1433,6 +1435,7 @@
 
 			#content header {
 				margin: 0 0 2em 0;
+
 			}
 
 		/* Footer */
@@ -1530,6 +1533,11 @@
 				font-size: 2.25em;
 			}
 
+			#header h2 {
+				font-family: 'Yanone Kaffeesatz';
+				font-size: 1.5em;
+			}
+
 			#header nav a {
 				font-size: 1.1em;
 			}
@@ -1546,6 +1554,8 @@
 
 			#content header {
 				margin: 0 0 1.25em 0;
+				font-family: 'Yanone Kaffeesatz';
+				font-size: 1.5em;
 			}
 
 	}
