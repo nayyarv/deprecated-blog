@@ -3,37 +3,42 @@ Title: Resume
 ## WORK EXPERIENCE
 
 ### Senior Machine Learning Engineer, Dec 2018 - Present
-Advanced Technology Group, Dolby Labs, Sydney
+*Advanced Technology Group, Dolby Laboratories, Sydney*
 
 - Developing SOTA speech recognition technology for use with Dolby devices and services.
 - Slashed training time from a 5 days to 30 minutes by porting Julia codebase to CUDA including an implementation of CTC loss. This enabled more complex model builds and faster experimentation which yielded better results.
 - Championed separation of training and deployment code to allow for greater flexibility, in recognition of differing constraints and requirements for each task.
 - Determined the relationship between Baum Welch and CTC to educate colleagues and guided efforts for multi-accent training with mixed corpora. 
 
+
+### Operations Research Analyst, Jan 2016 - Apr 2018
+*Hudson River Trading, Singapore*
+
+ - Improving trading control AI’s decision making processes with machine learning
+ - Reduced FPGA downtime from 10 min to 1 min by training a pricing model to assess impact to PNL and a system to automatically handle failure, improving PNL by 1%.
+ - Initiated metadata collection of AI  jobs and processes and developed system to automatically analyse failures to effectively direct improvements.
+ - Rebuilt the automated Corporate Actions system while improving speed, accuracy and robustness, allowing automated trading to take advantage of the volatility surrounding CAs.
+ - Achieved consensus among team to develop new style guide with an increased line length and spearheaded documentation efforts to reduce technical debt.
+
+
 ### Data Scientist (Contract & Volunteer), Oct 2018 - Dec 2018
-Sen. Di Natale's Office (Australian Greens), Australian Parliament
+*Sen. Di Natale's Office (Australian Greens), Australian Parliament*
 
  - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
  - Educated key stakeholders on the capabilities of Data Science, leading to more trust and reliance in data science methods when developing policy and campaign strategy.
  - Founded a volunteer Data Science group to provide data science manpower to party leadership and set up longer term projects based on census and voter contact data.
 
-### Co-Founder & CTO, Jun 2018 - Sep 2018
-Marvellous Questions  
-Startup providing Crypto Futures Hedging as a service to retail and merchants.
  
+
+### Co-Founder & CTO, Jun 2018 - Sep 2018
+*Marvellous Questions*
+
+ - Startup providing Crypto Futures Hedging as a service to retail and merchants. 
  - Trained futures hedging algorithms based on historical price ratios, with robust performance in simulated trading environments with generated transaction data.
  - Built robust and quick python REST and WebSocket market data feeds for bitfinex, bimex, coinbase, gemini, kraken and LROS, and CBOE via Interactive Brokers.
  - Wrote and iterated business plan in consultation wth advisors and potential financiers and led presentations to interested parties to help develop the idea further.
 
 
-### Operations Research Analyst, Jan 2016 - Apr 2018
-Hudson River Trading, Singapore  
-Improving trading control AI’s decision making processes with machine learning
-
- - Reduced FPGA downtime from 10 min to 1 min by training a pricing model to assess impact to PNL and a system to automatically handle failure, improving PNL by 1%.
- - Initiated metadata collection of AI  jobs and processes and developed system to automatically analyse failures to effectively direct improvements.
- - Rebuilt the automated Corporate Actions system while improving speed, accuracy and robustness, allowing automated trading to take advantage of the volatility surrounding CAs.
- - Achieved consensus among team to develop new style guide with an increased line length and spearheaded documentation efforts to reduce technical debt.
 
 ## TALKS
 
@@ -55,23 +60,23 @@ Improving trading control AI’s decision making processes with machine learning
 ## EDUCATION
 
 ### BEng(Electrical, Honours) & BSci(Statistics, Honours)
-UNSW 2010-2015
+*UNSW 2010-2015*
 
  - Faculty of Engineering Dean’s Award (Top 2% in cohort) — 2011,12,13,14
  - Faculty of Science Research Scholarship, $3800.
  - International Student Exchange Scholarship, $5000 - University of California SD
  - High Distinction Average (87.2)
 
-### Thesis - Engineering 
-Machine Learning, Honours/Masters Year 2014
+### Thesis - Engineering (2014)
+*Machine Learning, Honours/Masters Year*
 
 - Developed novel technique for emotion recognition by applying Bayesian Inference to GMMs. Technique was more robust when tested on IEMOCAP and LDC corpuses.
 - Researched and developed MCMC algorithms for use in high dimension spaces with automated 
 - Implemented expensive likelihood evaluation in CUDA and interfaced it to Python. [Github]
 (https://github.com/nayyarv/MonteGMM)
 
-### Thesis - Statstics
-Bayesian Inference, Honours/Masters Year 2015
+### Thesis - Statstics (2015)
+*Bayesian Inference, Honours/Masters Year*
 
 - Proposed novel sampling scheme to handle contamination models with expensive likelihoods using Approximate Bayesian Computations (ABCs).
 - Proved performance on simplified population datasets with R.
@@ -102,20 +107,20 @@ Bayesian Inference, Honours/Masters Year 2015
 ## ADDITIONAL EXPERIENCE
 
 ### Data Scientist, Apr 2015 - Aug 2015
-UNSW Learning and Teaching Unit
+*Learning and Teaching Unit, UNSW*
 
 - Discovered at-risk students by using unsupervised clustering on test behaviour.
 - Analysed course comments using NLP to identify poorly received modules.
 
 ### R&D Engineer, Jan 2015 - Mar 2015
-Buildings Alive  
+*Buildings Alive*
 
 - Startup developing innovative modelling to increase energy efficiency in offices
 - Slashed manpower costs and R&D deployment time by moving development to python and integrating with existing Java frontend using protocol buffers.
 - Championed sensor scraping system to augment energy modelling by deploying Raspberry Pis running sMAP to contracted office buildings. 
 
 ### Machine Learning Intern, Dec 2012 - Feb 2013
-Cochlear
+*Digital Signal Processing, Cochlear*
 
 - Trained Neural Response models on 200,000 measurements and fed into Classification Tree  to allow for automated calibration of Cochlear Implant.
 - Raised accuracy and speed of algorithm by 25% while improving robustness.

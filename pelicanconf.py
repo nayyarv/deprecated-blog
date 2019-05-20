@@ -34,7 +34,7 @@ DEFAULT_LANG = 'en'
 
 # this is to make jupyter notebooks an accessible category
 MARKUP = ('md')
-PLUGIN_PATHS = ['/Users/varun/Documents/github/pelicanplugins']
+PLUGIN_PATHS = ['/Users/varun/Documents/github/pelicanplugins', "./plugins"]
 PLUGINS = ['ipynb.markup']
 IPYNB_USE_METACELL = True
 IPYNB_GENERATE_SUMMARY = True

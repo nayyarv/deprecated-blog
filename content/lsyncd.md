@@ -39,7 +39,7 @@ sync {
     },
     exclude = {
         "build",
-        "Opal.jl/deps/downloads"
+        "downloads"
     },
     ssh = {
        identityFile = <private key>,
