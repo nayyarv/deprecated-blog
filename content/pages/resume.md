@@ -119,7 +119,7 @@ Title: Resume
 - Slashed manpower costs and R&D deployment time by moving development to python and integrating with existing Java frontend using protocol buffers.
 - Championed sensor scraping system to augment energy modelling by deploying Raspberry Pis running sMAP to contracted office buildings. 
 
-### Machine Learning Intern, Dec 2012 - Feb 2013
+### DSP Research Intern, Dec 2012 - Feb 2013
 *Digital Signal Processing, Cochlear*
 
 - Trained Neural Response models on 200,000 measurements and fed into Classification Tree  to allow for automated calibration of Cochlear Implant.
