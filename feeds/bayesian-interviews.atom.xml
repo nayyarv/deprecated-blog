@@ -1166,7 +1166,7 @@ h6:hover .anchor-link {
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="My-Solution"&gt;My Solution&lt;a class="anchor-link" href="#My-Solution"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;h2 id="The-Likelihood"&gt;The Likelihood&lt;a class="anchor-link" href="#The-Likelihood"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We consider the error circle in 2 dimensions (I've drawn one a bit below). Intuitively it is a
+&lt;h2 id="My-Solution"&gt;My Solution&lt;a class="anchor-link" href="#My-Solution"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;h2 id="The-Likelihood"&gt;The Likelihood&lt;a class="anchor-link" href="#The-Likelihood"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;We consider the error circle in 2 dimensions (I've drawn one a bit below). Intuitively it is a
 circle centereed at some co-ordinate $x$ with a distribution of it's
 radius $r$ for values of $\theta$. For the sake of simplicity, we
 assume that $\theta\sim Uniform(0,2\pi)$, but this is not necessary.&lt;/p&gt;
@@ -1737,12 +1737,12 @@ the maths significantly. (Also gives me another thing I can potentially publish!
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Some-Conclusions"&gt;Some Conclusions&lt;a class="anchor-link" href="#Some-Conclusions"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;&lt;h2 id="The-Good"&gt;The Good&lt;a class="anchor-link" href="#The-Good"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;Bayesian Updating - the implementation allows for bayesian updating - we could calculate the posterior on disjoint sample sets and combine. This is nice since we can calculate how our posterior changes on each observation for limited increase in computation. However the simplistic implementa- tion in Python is not optimised for this.&lt;/li&gt;
-&lt;li&gt;Posterior - while the task was to return a single best 􏰀t value, we can actually use the posterior to do proper inference or to guide our search if it isn't at the most likely spot.&lt;/li&gt;
+&lt;h2 id="Some-Conclusions"&gt;Some Conclusions&lt;a class="anchor-link" href="#Some-Conclusions"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;h2 id="The-Good"&gt;The Good&lt;a class="anchor-link" href="#The-Good"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Bayesian Updating - the implementation allows for bayesian updating - we could calculate the posterior on disjoint sample sets and combine. This is nice since we can calculate how our posterior changes on each observation for limited increase in computation. However the simplistic implementation in Python is not optimised for this.&lt;/li&gt;
+&lt;li&gt;Posterior - while the task was to return a single best 􏰀fit value, we can actually use the posterior to do proper inference or to guide our search if it isn't at the most likely spot.&lt;/li&gt;
 &lt;li&gt;Multiple models of error on measurement possible - we have chosen a 10% sd error on the radius but could have chosen a constant value given more information on the measurement. We didn't model the error in location of x,y for simplicity as we can consider this as part of the error in the bird's location&lt;/li&gt;
 &lt;li&gt;Robust performance with less data - with just 10 observations we've al- ready worked out (117, 162) as the MAP. Would allow fewer observations to get good inference.&lt;/li&gt;
-&lt;li&gt;Ability to handle noise - in a frequentist setting, we would see observations like the 9th one could throw o􏰁 frequentist inference while a Bayesian approach is more robust to outliers&lt;/li&gt;
+&lt;li&gt;Ability to handle noise - in a frequentist setting, we would see observations like the 9th one could throw o􏰁ff frequentist inference while a Bayesian approach is more robust to outliers&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="Further-Work"&gt;Further Work&lt;a class="anchor-link" href="#Further-Work"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;All in all this was a simplied approach chosen to simplify the mathematics and calculations as well as respect time already spent. We could try&lt;/p&gt;
 &lt;ol&gt;

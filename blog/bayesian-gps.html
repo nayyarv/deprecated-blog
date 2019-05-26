@@ -1226,7 +1226,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="My-Solution">My Solution<a class="anchor-link" href="#My-Solution">&#182;</a></h1><h2 id="The-Likelihood">The Likelihood<a class="anchor-link" href="#The-Likelihood">&#182;</a></h2><p>We consider the error circle in 2 dimensions (I've drawn one a bit below). Intuitively it is a
+<h2 id="My-Solution">My Solution<a class="anchor-link" href="#My-Solution">&#182;</a></h2><h2 id="The-Likelihood">The Likelihood<a class="anchor-link" href="#The-Likelihood">&#182;</a></h2><p>We consider the error circle in 2 dimensions (I've drawn one a bit below). Intuitively it is a
 circle centereed at some co-ordinate $x$ with a distribution of it's
 radius $r$ for values of $\theta$. For the sake of simplicity, we
 assume that $\theta\sim Uniform(0,2\pi)$, but this is not necessary.</p>
@@ -1797,12 +1797,12 @@ the maths significantly. (Also gives me another thing I can potentially publish!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Some-Conclusions">Some Conclusions<a class="anchor-link" href="#Some-Conclusions">&#182;</a></h1><h2 id="The-Good">The Good<a class="anchor-link" href="#The-Good">&#182;</a></h2><ol>
-<li>Bayesian Updating - the implementation allows for bayesian updating - we could calculate the posterior on disjoint sample sets and combine. This is nice since we can calculate how our posterior changes on each observation for limited increase in computation. However the simplistic implementa- tion in Python is not optimised for this.</li>
-<li>Posterior - while the task was to return a single best 􏰀t value, we can actually use the posterior to do proper inference or to guide our search if it isn't at the most likely spot.</li>
+<h2 id="Some-Conclusions">Some Conclusions<a class="anchor-link" href="#Some-Conclusions">&#182;</a></h2><h2 id="The-Good">The Good<a class="anchor-link" href="#The-Good">&#182;</a></h2><ol>
+<li>Bayesian Updating - the implementation allows for bayesian updating - we could calculate the posterior on disjoint sample sets and combine. This is nice since we can calculate how our posterior changes on each observation for limited increase in computation. However the simplistic implementation in Python is not optimised for this.</li>
+<li>Posterior - while the task was to return a single best 􏰀fit value, we can actually use the posterior to do proper inference or to guide our search if it isn't at the most likely spot.</li>
 <li>Multiple models of error on measurement possible - we have chosen a 10% sd error on the radius but could have chosen a constant value given more information on the measurement. We didn't model the error in location of x,y for simplicity as we can consider this as part of the error in the bird's location</li>
 <li>Robust performance with less data - with just 10 observations we've al- ready worked out (117, 162) as the MAP. Would allow fewer observations to get good inference.</li>
-<li>Ability to handle noise - in a frequentist setting, we would see observations like the 9th one could throw o􏰁 frequentist inference while a Bayesian approach is more robust to outliers</li>
+<li>Ability to handle noise - in a frequentist setting, we would see observations like the 9th one could throw o􏰁ff frequentist inference while a Bayesian approach is more robust to outliers</li>
 </ol>
 <h2 id="Further-Work">Further Work<a class="anchor-link" href="#Further-Work">&#182;</a></h2><p>All in all this was a simplied approach chosen to simplify the mathematics and calculations as well as respect time already spent. We could try</p>
 <ol>
