@@ -1411,6 +1411,12 @@
 				margin: 0 0 10% 0;
 			}
 
+			#content h1 {
+				font-size: 2.5em;
+				color: #373f42;
+				margin: 0em 0 0.25em 0;
+			}
+
 			#content h2 {
 				font-size: 1.8em;
 				color: #373f42;
