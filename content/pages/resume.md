@@ -2,11 +2,11 @@ Title: Resume
 
 ## WORK EXPERIENCE
 
-### Senior Machine Learning Engineer, Dec 2018 - Present
-*Advanced Technology Group, Dolby Laboratories, Sydney*
+### Senior Research Engineer, Dec 2018 - Present
+*Technology Incubation, Dolby Laboratories, Sydney*
 
 - Developing SOTA speech recognition technology for use with Dolby devices and services.
-- Slashed training time from a 5 days to 30 minutes by porting Julia codebase to CUDA including an implementation of CTC loss. This enabled more complex model builds and faster experimentation which yielded better results.
+- Slashed training time from a 5 days to 30 minutes by porting Julia Deep Learning codebase to CUDA including an implementation of CTC loss. This enabled more complex model builds and faster experimentation which yielded 95% detection with low false positive rates.
 - Championed separation of training and deployment code to allow for greater flexibility, in recognition of differing constraints and requirements for each task.
 - Determined the relationship between Baum Welch and CTC to educate colleagues and guided efforts for multi-accent training with mixed corpora. 
 
@@ -21,7 +21,7 @@ Title: Resume
  - Achieved consensus among team to develop new style guide with an increased line length and spearheaded documentation efforts to reduce technical debt.
 
 
-### Data Scientist (Contract & Volunteer), Oct 2018 - Dec 2018
+### Data Scientist, Oct 2018 - Dec 2018
 *Sen. Di Natale's Office (Australian Greens), Australian Parliament*
 
  - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
@@ -30,7 +30,7 @@ Title: Resume
 
  
 
-### Co-Founder & CTO, Jun 2018 - Sep 2018
+### CTO, Jun 2018 - Sep 2018
 *Marvellous Questions*
 
  - Startup providing Crypto Futures Hedging as a service to retail and merchants. 
@@ -42,12 +42,19 @@ Title: Resume
 
 ## TALKS
 
- - [GPU Acceleration with CUDA and Python](https://github.com/nayyarv/PyCudaIntro) | [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyzcbpc/) - Talk presented at Sydney Python August 2018 about CUDA architecture and development.
- - [Hacking Binary Ops in CPython](https://github.com/nayyarv/CpythonLookingGlass) | [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyxkbjc/) - Talk presented at Sydney Python January 2019 about CPython Source Code.
- - [The What, Why and How of Bayesian Inference](https://docs.google.com/presentation/d/e/2PACX-1vSykBSh072plEpk61jQvznUdNzS6MCpNYPltzDmxr4A0AOCkFVTtJfK3UqusuCDwParywF7sPwemIds/pub?start=false&loop=false&delayms=3000) | [Video](https://www.youtube.com/watch?v=A9r8C2GFR4k) | [Event Link](https://www.meetup.com/Data-Science-Sydney/events/259627528/) - presented to Sydney Data Science, March 2019
- - [inteRnals](https://github.com/nayyarv/inteRnals) - advanced look at GNU R, presented at Sydney Users of R, May 2019.
- - [DSAi Rethinking](https://dsai.org.au/courses/01-dsai-study-bayesian-inference-statistical-rethinking/) - Ran 5 week Bayesian Rethinking Study Group, April-May 2019
- - [Bayesian Modelling with Tensorflow Probability](https://www.meetup.com/en-AU/DeepSchool-io/events/260753939/) - Introduction to Bayesian Linear Models with TFP.
+- [GPU Acceleration with CUDA and Python](https://github.com/nayyarv/PyCudaIntro) | [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyzcbpc/) - Talk presented at Sydney Python August 2018 about CUDA architecture and development
+    - Upcoming presentation at PyCON AU 2019, Science and Data stream.
+
+- [Hacking Binary Ops in CPython](https://github.com/nayyarv/CpythonLookingGlass) | [Event Link](https://www.meetup.com/sydneypython/events/nrphrpyxkbjc/) - Talk presented at Sydney Python January 2019
+
+- [The What, Why and How of Bayesian Inference](https://docs.google.com/presentation/d/e/2PACX-1vSykBSh072plEpk61jQvznUdNzS6MCpNYPltzDmxr4A0AOCkFVTtJfK3UqusuCDwParywF7sPwemIds/pub?start=false&loop=false&delayms=3000) | [Video](https://www.youtube.com/watch?v=A9r8C2GFR4k) | [Event Link](https://www.meetup.com/Data-Science-Sydney/events/259627528/) - presented to Sydney Data Science, March 2019
+
+- [inteRnals](https://github.com/nayyarv/inteRnals) | [Event Link](https://www.meetup.com/R-Users-Sydney/events/260866643/) - advanced look at GNU R, presented at Sydney Users of R, May 2019.
+
+- [Bayesian Modelling with Tensorflow Probability](https://github.com/nayyarv/ProbablyTensorFlow) | [Event Link](https://www.meetup.com/en-AU/DeepSchool-io/events/260753939/) - Introduction to Bayesian Linear Models with TFP.
+
+- [DSAi Rethinking](https://dsai.org.au/courses/01-dsai-study-bayesian-inference-statistical-rethinking/) - Ran 5 week Bayesian Rethinking Study Group, April-May 2019
+
 
 
 ## OPEN SOURCE
@@ -85,11 +92,13 @@ Title: Resume
 
 ## BLOG ARTICLES
 
+- [Bayesian GPS](https://nayyarv.github.io/blog/bayesian-gps) - A Bayesian take on a simplified GPS problem.
 - [Reinforcement Learning](https://nayyarv.github.io/blog/cartpole-q-learning) - Neural Q Learning applied to OpenAi Cartpole.
 - [Tosser](https://nayyarv.github.io/blog/tosser) - How to play a game with E(X) -> infinity, while p(X>0) -> 0.
 - [Contributing to Numpy](https://nayyarv.github.io/blog/my-contribution-to-numpy) - about my PR referenced above.
 
 ## SKILLS
+For the ATS systems out there
 
 - Clustering - GMMs, KMeans, Spectral Clustering, DBScan
 - Classification - Bagging, Boosting (Catboost, XGBoost), SVMs
