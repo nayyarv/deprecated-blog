@@ -1,4 +1,4 @@
-Title: A Bayesian's view on Neural Nets
+Title: A Bayesian's View on Neural Nets
 Subtitle: Deep Learning, Convolution and the Hype Machine
 Date: 2018-10-23 10:20
 Category: critique
