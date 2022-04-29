@@ -2,7 +2,18 @@ Title: Resume
 
 ## WORK EXPERIENCE
 
-### Senior Research Engineer, Dec 2018 - Present
+### Staff Research Engineer, Jan 2020 - Present
+
+*Autumn Compass, Sydney*
+
+- Increased sim-PNL by 20% by moving our black box optimiser to CMA-ES and taking advantage of training similar instruments together to reduce overfit.
+- Developed profitable trading on ASX that did daily turnover of ~7 million AUD, resulting in broker fees being cut by 30%.
+- Reduced incidents by 95% and increased researcher productivity and system quality by hiring an SRE to dedicate development time to infrastructure and operations,
+- Sped up research project iteration through a strong technical vision that included Metaflow for flexible compute and Python/C++ bindings for backtest simulation.
+- Introduced management standards, starting with fortnightly 1-1s, monthly managerial catchups, weekly research presentations and an explicit career ladder.
+
+
+### Senior Research Engineer, Dec 2018 - July 2019
 *Technology Incubation, Dolby Laboratories, Sydney*
 
 - Developing SOTA speech recognition technology for use with Dolby devices and services.
@@ -27,16 +38,6 @@ Title: Resume
  - Built ordinal LASSO logistic models to quantify odds ratios of various demographic indicators on survey responses, informing childcare, health and education policy development.
  - Educated key stakeholders on the capabilities of Data Science, leading to more trust and reliance in data science methods when developing policy and campaign strategy.
  - Founded a volunteer Data Science group to provide data science manpower to party leadership and set up longer term projects based on census and voter contact data.
-
- 
-
-### CTO, Jun 2018 - Sep 2018
-*Marvellous Questions*
-
- - Startup providing Crypto Futures Hedging as a service to retail and merchants. 
- - Trained futures hedging algorithms based on historical price ratios, with robust performance in simulated trading environments with generated transaction data.
- - Built robust and quick python REST and WebSocket market data feeds for bitfinex, bimex, coinbase, gemini, kraken and LROS, and CBOE via Interactive Brokers.
- - Wrote and iterated business plan in consultation wth advisors and potential financiers and led presentations to interested parties to help develop the idea further.
 
 
 
@@ -114,6 +115,13 @@ For the ATS systems out there
 
 
 ## ADDITIONAL EXPERIENCE
+
+### Machine Learning Consultant, Sep 2019 - Dec 2019
+
+*Safety in Numbers, http://54f37y.com/*
+
+- Developed the ML strategy for the company and formalised guidelines on data needs and labelling strategies for training image recognition algorithms.
+- Slashed human labelling time by developing a W-beam Neural Net classifier to automatically tag video times and bootstrap the dataset size for next gen products.
 
 ### Data Scientist, Apr 2015 - Aug 2015
 *Learning and Teaching Unit, UNSW*
