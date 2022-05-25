@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<!--
+	halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bayesian Learning - Some Technical Interview Questions</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/theme/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/theme/css/ie9.css" /><![endif]-->
+  		<meta property="og:locale" content="en">
+		<meta property="og:site_name" content="Bayesian Learning">
+
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Varun Nayyar">
+  <meta property="og:url" content="https://nayyarv.github.io/blog/some-technical-interview-questions">
+  <meta property="og:title" content="Some Technical Interview Questions">
+  <meta property="og:description" content="Interviews, ML, decisions">
+  <meta property="article:published_time" content="2019-08-26 10:20:00+10:00">
+	</head>
+	<body class="subpage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Logo -->
+									<h1><a href="/" id="logo">Bayesian Learning</a></h1>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="/about">About</a>
+										<a href="/archives">Archives</a>
+										<a href="/tags">Tags</a>
+										<a href="/categories">Categories</a>
+									</nav>
+
+							</div>
+						</div>
+					</header>
+				</div>
+
+			<!-- Content -->
+				<div id="content-wrapper">
+					<div id="content">
+						<div class="container">
+							<div class="row">
+								<div class="9u 12u(mobile)">
+
+									<!-- Main Content -->
+
+										<section>
+            <header>
+            <h2>Some Technical Interview Questions</h2>
+<h3>Interviews, ML, decisions</h3>            <h4>Published on August 26th, 2019</h4>
+
+            </header>
+            <p>I recently had the chance/misfortune to attend a lot of ML interviews and it's kind of given me a little insight into the industry as it stands right now. I wanted to share the way I interview and why I choose those questions. These questions are mostly ideal for a small/mid size DS/ML tech firm - smaller companies can't afford as much specialisation and niche areas of research will have people coming in quite unfamiliar that you don't want to reject unecessarily (a la Google) due to a much weaker recruitment pool.</p>
+<p>This article really only applies to final interviews of candidates, but some ideas might bleed over to screening rounds too.</p>
+<h2>The Rationale</h2>
+<p>At a smaller firm, the job title in ML is best described as Research Engineer. You need to have feet in both research and software since you need to be able to implement your ideas as well as roll out to production. You tend to get two different types here - maths majors who've learned to program well and programmers who've picked up maths. The first group tend to be PhD's (or dropouts) while the second group tend to be self taught in ML. </p>
+<h2>Considerations</h2>
+<ol>
+<li>It has to be about the fundamentals/basics <ul>
+<li>You can't ask anything specific to your domain - it's likely to be niche, your candidate is unlikely to have skill in your particular area, and even if he's coming from a competitor, the way things done are so different, it's tricky to assume any level of skill. Fundamentally, you can't select for specific knowledge since either the interviewer is not proficient enough or the candidate isn't. </li>
+<li>Seeing if they stay up to date is really difficult since they may, but in an area you're not familiar in. And if they haven't read the latest paper in your space, that's not on them either.</li>
+<li>You're trying to work out if they can learn new things. You're testing for intelligence, not specific knowledge.</li>
+</ul>
+</li>
+<li>Not everyone has experience with every algorithm. You can't ask someone about the details of a neural net if they've never trained one. Not having experience with torch/tensorflow is meaningless, most people never need to train neural nets and shouldn't, so it shouldn't be held against them. I call this the KL divergence criterion - measuring someone's skill should be independent of the interviewer's interests and skills.</li>
+<li>It should give them a chance to go into depth. In order to be about the basics without being a quiz, it should allow the person to dive as deep as they are able. This gives them a chance to show off what they know. Because of this, I don't necessarily like the idea of 5 independent 45 minute interviews. I think it's a good idea to have the technical interview run a bit longer and reduce the number of interviews. </li>
+<li>You should decide on a rubric before you go into the interviewer. This can be modified as you get more experience, but reasoning about how marks should be allocated reduces your bias and also helps getting feedback from colleagues. It also forces you to think about how questions</li>
+</ol>
+<h2>Cardinal Sins</h2>
+<ol>
+<li>Quizzes. Your interview questions should be good even when doing it open book. Questions like this are of limited benefit and tend to be good for someone fresh out of a data science bootcamp.<ul>
+<li>Vanishing gradients in Neural Nets</li>
+<li>What are support vectors in SVMs</li>
+<li>The difference between Boosting and Bagging
+Furthermore, these questions impinge on my principle of expecting full coverage of questions and not being good open book questions. They serve well as a screeners, but should be abandoned early.</li>
+</ul>
+</li>
+<li>Pure software interviews<ul>
+<li>Data Structures and algorithms are not good ways to interview ML engineers. There is some benefit, but a very large part of ML engineering doesn't go that low level since much of it is done in higher level languages that have plenty of abstractions. Most software engineers never really go into much depth in terms of Data Structures, most ML engineers even less. You'll reject many for no reason</li>
+<li>These questions are easily gameable. Seeing the study guides for google et al, it doesn't seem like something you can compete with. Leetcode has nearly every interview and this has resulted in degeneracy in the interview process.</li>
+<li>These questions have high false positive rates - many rely on tricks or familiarity. It's worth a simple one  as a fizzbuzz test but nothing more.</li>
+<li>Software interviews are best combined with real world programming. I had an interview which asked me to implement malloc and free - this was a terrible interview for my skillset, but something that would be good to ask a software engineer. Another example was a key value DB that also kept the time values so you could get historical records too.</li>
+</ul>
+</li>
+<li>Brain teasers<ul>
+<li>This is very rarely a good idea - it can be a proxy feature of what you're looking for, but it's a very noisy way of getting that out. This was tried in discarded in the 2000s by most software firms.</li>
+<li>Again, these are likely to select people who've seen the questions and also those who are lucky. It's also heavily dependent on the interviewers giving good hints. </li>
+</ul>
+</li>
+</ol>
+<h2>General Principles</h2>
+<ol>
+<li>Tailor the interview to the candidate - ask them which areas of ML they're good at, or provide a few questions and give them a choice. For ML, you don't want to check their weaknesses, you want to test their strengths.<ul>
+<li>I've considered asking an interviewee what they'd prefer to be tested on and ask them to prep it and test them on that instead of giving a very broad interview.</li>
+<li>If they have a publically available project, I think it would be a good idea to ask them to review it and write up a presentation on it. This could be a good way to determine their understanding of their core topic and comfort with presenting.</li>
+</ul>
+</li>
+<li>Take Home Interview Aside<ul>
+<li>this should be used judiciously. If a person has no experience and no portfolio, it's fair to ask. Less so for experienced candidates since they'll have other offers and not want to waste time on your interview.</li>
+<li>Provide choice so the person gets to play to their strengths</li>
+<li>Ensure the person speaks with someone on the ML team before asking for the assignment. If the person is clearly competent, it may not be necessary and might chase away competent people. It also gives them an indication of fit so they can choose to spend the time on the process</li>
+<li>Offer payment at market rate (i.e. if you're paying 100k pay 50/hr). This prevents you from setting stupidly long assignments, shows committment to the candidate and provides a hard time limit. You should get this time limit from asking other members of the team to do this question and estimate time spent on it.</li>
+<li>Provide a marking rubric - allow the candidate to understand what you value. It also ensures consistency across reviewers and if universities do so, so should you.</li>
+</ul>
+</li>
+<li>Workshop your interview - testing on a person currently working for the company is a good idea. You get an idea of how long the interview will take (add a multiplier for interview nerves) and if it's an interview that would pass your current colleagues. You should discuss interview questions with colleagues extensively and try it out on a couple of candidates with low confidence to check it's performaance in real world scenarios before moving it into the standard rotation.</li>
+<li>These interviews require more work, but in a competitive market, a good interviewing experience can really help you stand out. They also give you a chance to get someone's best performance instead of the relatively noisy current interview style.</li>
+</ol>
+<h2>My Questions (in progress)</h2>
+<h3>The Elevator Problem</h3>
+<p>Problem solving in a vacuum. No ML needed, but may bias towards Comp Sci majors since it is algorithmic. I like it since it requires one to state a few assumptions, come to a few simple insights and decide on it.</p>
+<h4>Question Statement</h4>
+<p>A residential building has 20 floors and 3 elevators. The current elevator algorithm chooses the nearest elevator and sends it to the requesting floor. You can assume that elevators are almost always used one at a time (i.e. there is never more than 1 requester and while he/she is in motion, no one else requests an elevator). </p>
+<ol>
+<li>Describe some scenarios which cause subpar performance with this algorithm.<ul>
+<li>Hint: consider what happens in the morning and the evenings during the week</li>
+</ul>
+</li>
+<li>Can you suggest some improvements to the algorithm to minimise waiting time for the residents<ul>
+<li>Note: the optimal solution is in research, so make sure they only try to come up with a good algorithm</li>
+<li>Describe how your considerations would change for an office building</li>
+<li>How would you evaluate your new algorithm?</li>
+</ul>
+</li>
+</ol>
+<h4>Notes</h4>
+<ul>
+<li>Tests Problem Solving ability and taking poorly defined questions and reasoning about them</li>
+<li>Stress to candidates that this is not an ML question, just something more deterministic</li>
+<li>Many problems require simple solutions - recognising that is a good sign</li>
+<li>Meta level considerations (feasability of having ML in elevators) is usually a good sign. </li>
+<li>Extra bonus - simulate some data and then evaluate the improvements. Also tests coding ability</li>
+</ul>
+<h3>Design a Neural Net</h3>
+<p>Good mix of software systems design and ML considerations. I really like this since neural nets are so simple but have a few design decisions. Additionally, almost every ML person will have some understanding of how Neural Nets work and this requires very little prior knowledge. This should be done open book. </p>
+<p>There are many ML points to consider that allow for an in depth look into their ability to reason. It's also not some annoying string search algorithm that is very gameable. </p>
+<h4>Question Statement</h4>
+<p>We live in a world where torch and tensorflow don't exist. You want to build your own neural net using just numpy. It should</p>
+<ul>
+<li>Support an arbitrary number of layers</li>
+<li>Have Fully Connected Layers and TanH activations out of the box</li>
+<li>Do SGD for optimisation</li>
+<li>(Bonus 1) custom learning rate</li>
+<li>(Bonus 2) Momentum SGD - this can be tough</li>
+</ul>
+<p>You can assume</p>
+<ul>
+<li>No GPU acceleration</li>
+<li>Infinite RAM </li>
+<li>No RNNs</li>
+<li>data is a single (shortish) vector</li>
+</ul>
+<h4>Notes</h4>
+<ul>
+<li>Longish interview, systems design esque. </li>
+<li>This can double as a behavioural interview and see how they respond to criticism and suggestions</li>
+<li>Arbitrary changes should be proposed to see how they handle design. <ul>
+<li>Dual Fully Connected Layers (W1 @ x2 + W2 @ x2) should be an interesting mixup</li>
+<li>Skip Layers?</li>
+<li>How would they implement Transfer learning</li>
+</ul>
+</li>
+<li>This can be adapted to implementing a particular simple algorithm that they're familiar with. Doing Bayesian Linear regression via MCMC achieves a very similar outcome for someone who's familiar with Bayesian methodology</li>
+</ul>
+<p>Many points of discussion, a few below:</p>
+<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="nv">How</span> <span class="nv">to</span> <span class="nv">initialise</span> <span class="o">-</span> <span class="nv">why</span> <span class="nv">ones</span> <span class="nv">and</span> <span class="nv">zeros</span> <span class="nv">is</span> <span class="nv">bad</span> <span class="k">for</span> <span class="nv">weight</span> <span class="nv">matrices</span>.
+    <span class="o">-</span> <span class="nv">I</span>.<span class="nv">e</span>. <span class="nv">backprop</span> <span class="nv">is</span> <span class="nv">slow</span> <span class="nv">and</span> <span class="nv">imbalanced</span> 
+<span class="o">-</span> <span class="nv">Shape</span> <span class="nv">of</span> <span class="nv">state</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">FC</span> <span class="nv">layer</span>. <span class="nv">Column</span> <span class="nv">major</span> <span class="nv">vs</span> <span class="nv">row</span> <span class="nv">major</span>? 
+<span class="o">-</span> <span class="nv">How</span> <span class="nv">to</span> <span class="nv">save</span> <span class="nv">the</span> <span class="nv">x</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">backward</span> <span class="nv">pass</span>? <span class="nv">Design</span> <span class="nv">choice</span>
+<span class="o">-</span> <span class="nv">How</span> <span class="nv">to</span> <span class="nv">implement</span> <span class="nv">the</span> <span class="nv">optimiser</span>
+<span class="o">-</span> <span class="k">Do</span> <span class="nv">they</span> <span class="nv">write</span> <span class="nv">tests</span> <span class="o">-</span> <span class="nv">can</span> <span class="nv">they</span> <span class="nv">check</span> <span class="nv">it</span> <span class="nv">works</span>
+    <span class="o">-</span> <span class="nv">A</span> <span class="nv">set</span> <span class="nv">of</span> <span class="nv">tests</span> <span class="nv">is</span> <span class="nv">very</span> <span class="nv">good</span> <span class="nv">to</span> <span class="nv">see</span> <span class="k">if</span> <span class="nv">they</span><span class="s1">&#39;</span><span class="s">re considering how it</span><span class="s1">&#39;</span><span class="nv">s</span> <span class="nv">going</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">used</span>
+    <span class="o">-</span> <span class="nv">Checking</span> <span class="nv">that</span> <span class="nv">training</span> <span class="nv">a</span> <span class="nv">net</span> <span class="nv">on</span> <span class="k">random</span> <span class="nv">data</span> <span class="nv">reduces</span> <span class="nv">loss</span> <span class="nv">is</span> <span class="nv">good</span> <span class="ss">(</span><span class="nv">suggest</span> <span class="nv">providing</span> <span class="nv">loss</span> <span class="nv">function</span> <span class="nv">and</span> <span class="nv">derivatives</span> <span class="k">for</span> <span class="nv">speed</span><span class="ss">)</span>
+<span class="o">-</span> <span class="nv">Discussion</span> <span class="nv">on</span> <span class="nv">numerical</span> <span class="nv">considerations</span> <span class="ss">(</span><span class="nv">i</span>.<span class="nv">e</span>. <span class="nv">logs</span> <span class="nv">and</span> <span class="nv">small</span> <span class="nv">numbers</span>, <span class="nv">requiring</span> <span class="nv">the</span> <span class="nv">combination</span> <span class="ss">)</span>
+</code></pre></div>
+
+<h2>Further Questions</h2>
+<p>To be added</p>
+<p>Implementing ML algorithms is a great exercise - it doesn't have to be a neural net, but they can choose an algorithm they're most familiar with. </p>
+<div class="highlight"><pre><span></span><code>- A simple tree algorithm is another great one. 
+- MCMC is another algorithm that is super easy to implement and can be tested on anscombe&#39;s quartet
+- Linear Regression is a bit too simple, so make sure they add more diagnositcs and I would suggest using tro
+</code></pre></div>
+
+<h2>ML &amp; DS today</h2>
+<p>Opinion</p>
+<ol>
+<li>ML/Research Scientist - Almost exclusive to large organisations, these are commonly Postdocs with strong publication records who've left academia because of the insane competition for tenure and ply their trade on complex problems. Since large companies tend to have a lot of infrastructure and support, these people tend to come in very specialised since the scale and depth of these problems is very different. For example, the Google Assistant is world class (especially with varying accents) and this level of performance is very research intensive.</li>
+<li>ML Engineer (Large Company) - The scale at large companies results in a split of the ML roles into scientist (Above) and engineer. Most of this is focussed on things like data pipelines, clusters, implementing algorithms from scientists, scaling up to a cluster or even working with scientists to adapt algorithm for scale. This is much closer to a pure SWE than an ML engineer at a smaller company.</li>
+<li>ML (Small/Mid company) - specialisation is not really something the company needs and requires. R&amp;D, ops and deployment are tightly knit and there is a significant need to share duties. Problems are less cutting edge and the scale is much smaller. Full datasets will likely fit into RAM so large scale sharding and infra is significantly less important here. The role of engineer and scientist tends to blend together here with the job best being described as a research engineer. There is expectation to develop the algorithms and deploy them as well as maintain all the infrastructure necessary. This is a tricky position to hire for, since it's very rare to find high level skill in research and software. This merged skillsets are conversely less valuable in a large company, so make sure to not copy and paste requirements - being open is your best bet for finding a good fit.</li>
+<li>Data Scientist - this role is the worst defined. This role is most commonly found in non-tech firms, but not always. There tends to be a combination of the top 3, but most of the algorithms and software tends to be off the shelf. This job in many ways tends to be a mixture of software engineer and domain expert, or a progression of the Data Analyst. Going beyond off the shelf requires tends to require a full ML team, and the Data Scientists here tend to be using internally built tools and techniques and reporting to the central team developing algorithms for problems. This role is still in flux and will likely be for a while. Any company of significant size will start moving towards ML engineers with math expertise and Data Scientists with domain expertise.</li>
+</ol>
+            <hr>
+              <!-- Pagination -->
+            <div class="pagination">
+              <a class="pagination" href="https://nayyarv.github.io/blog/bayesian-gps">
+             &larr; Bayesian GPS ]
+         </a>
+            </div>
+										</section>
+
+								</div>
+								<div class="3u 12u(mobile)">
+
+									<!-- Sidebar -->
+                                        <section>
+                                            <header>
+                                                <h2>Recent Articles</h2>
+                                            </header>
+                                            <ul class="link-list">
+
+                                                
+                                                <li><a class = "red" href="/blog/some-technical-interview-questions">Some Technical Interview Questions</a><br>Interviews, ML, decisions</li>
+
+                                                
+                                                <li><a class = "red" href="/blog/bayesian-gps">Bayesian GPS</a><br>A Bayesian take on GPS esque maths</li>
+
+                                                
+                                                <li><a class = "red" href="/blog/lsyncd">Lsyncd</a><br>Or working on remote servers</li>
+
+                                                
+                                                <li><a class = "red" href="/blog/my-contribution-to-numpy">My Contribution to Numpy</a><br>Histograms, binwidth and the importance of communication</li>
+                                                
+                                            </ul>
+                                        </section>                                        <section>
+                                            <header>
+                                                <h2>Social</h2>
+                                            </header>
+                                            <p>
+                                                Vehicula fermentum ligula at pretium. 
+                                            </p>
+                                            <ul class="link-list">
+                                                <li><a class="red" href="https://github.com/nayyarv/">github</a></li>
+                                                <li><a class="red" href="mailto:nayyarv@gmail.com">email</a></li>
+                                            </ul>
+                                        </section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+                <div id="footer-wrapper">
+                    <footer id="footer" class="container">
+                        <div class="row">
+                            <div class="4u 12u(mobile)">
+
+                                <!-- Blurb -->
+                                    <section>
+                                        <h2>About Halcyonic For Pelican</h2>
+                                        
+                                            Based on the <a href="https://html5up.net/halcyonic">Halcyonic theme</a> by HTML5 UP, who graciously releases all of their themes under a <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons license</a>.<br>In short, that means you can do whatever you want with this theme, as long as HTML5 UP is credited.
+
+                                        </p>
+                                    </section>
+
+                            </div>                        </div>
+                    </footer>
+                </div>
+                            <!-- Copyright -->
+                <div id="copyright">
+                     &copy; 2022 | Design: <a href="http://html5up.net">HTML5 UP</a> | Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>
+                </div>
+
+
+		</div>
+
+		<!-- Scripts -->
+            <script src="/theme/js/jquery.min.js"></script>
+            <script src="/theme/js/skel.min.js"></script>
+            <script src="/theme/js/skel-viewport.min.js"></script>
+            <script src="/theme/js/util.js"></script>
+            <!--[if lte IE 8]><script src="/theme/js/ie/respond.min.js"></script><![endif]-->
+            <script src="/theme/js/main.js"></script>
+
+	</body>
+</html>
+

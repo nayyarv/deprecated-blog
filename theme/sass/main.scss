@@ -1,7 +1,8 @@
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
-@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
 
 /*
 	halcyonic by HTML5 UP
@@ -51,17 +52,17 @@
 		background: #D4D9DD url('images/bg03.jpg');
 		color: #474f51;
 		font-size: 13.5pt;
-		font-family: 'Yanone Kaffeesatz';
+		font-family: 'Montserrat', sans-serif;
 		line-height: 1.85em;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	input, textarea, select {
 		color: #474f51;
 		font-size: 13.5pt;
-		font-family: 'Yanone Kaffeesatz';
+		font-family: 'Montserrat', sans-serif;
 		line-height: 1.85em;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	ul, ol, p, dl {

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!--
+	halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bayesian Learning - Lsyncd</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/theme/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/theme/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/theme/css/ie9.css" /><![endif]-->
+  		<meta property="og:locale" content="en">
+		<meta property="og:site_name" content="Bayesian Learning">
+
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Varun Nayyar">
+  <meta property="og:url" content="https://nayyarv.github.io/blog/lsyncd">
+  <meta property="og:title" content="Lsyncd">
+  <meta property="og:description" content="Or working on remote servers">
+  <meta property="article:published_time" content="2019-05-10 10:20:00+10:00">
+	</head>
+	<body class="subpage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+						<div class="row">
+							<div class="12u">
+
+								<!-- Logo -->
+									<h1><a href="/" id="logo">Bayesian Learning</a></h1>
+
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="/about">About</a>
+										<a href="/archives">Archives</a>
+										<a href="/tags">Tags</a>
+										<a href="/categories">Categories</a>
+									</nav>
+
+							</div>
+						</div>
+					</header>
+				</div>
+
+			<!-- Content -->
+				<div id="content-wrapper">
+					<div id="content">
+						<div class="container">
+							<div class="row">
+								<div class="9u 12u(mobile)">
+
+									<!-- Main Content -->
+
+										<section>
+            <header>
+            <h2>Lsyncd</h2>
+<h3>Or working on remote servers</h3>            <h4>Published on May 10th, 2019</h4>
+
+            </header>
+            <p>This is a short blog on using lsycnd, a tool to sync between you and a remote host.</p>
+<h2>Working on a Remote Host</h2>
+<p>In many instances, I find it necessary to work on a remote host. The reasons are numerous, but commonly come down to hardware - I need a GPU or a much beefier compute instance than my laptop can provide. This is not the only reason, the other common reason has been data location - my datasets were in the US and I was in Sydney. It's much faster to send your code over than TBs of data, so that was a no brainer. Of course, corporate IT might mandate it under Data Loss Prevention ideas, but the fact of the matter, running your code on a remote server is a relatively common thing we need to do as Data Scientists.</p>
+<p>I vastly prefer the tools I grew up with before I got good with vim and using vim over high latency connections is annoying and I haven't spent the time configuring vim to be on par with what an IDE gets you out of the box. So I use a tool called <code>lsyncd</code> instead</p>
+<h2>Lsyncd</h2>
+<p><a href="https://github.com/axkibe/lsyncd">Lsyncd</a> is a daemon written in lua and C that watches a series of folders and syncs the files that change over rysnc. It's perfect for keeping your code in sync with a remote host. </p>
+<p>Here's a minimum lsycnd config file. Save it to a location say <code>~/.lsyncd</code>. Use the <code>rsync</code> conventions to replace the angle bracket fields.</p>
+<div class="highlight"><pre><span></span><code><span class="n">settings</span> <span class="p">{</span>
+    <span class="n">logfile</span>    <span class="o">=</span> <span class="s2">&quot;/tmp/lsyncd.log&quot;</span><span class="p">,</span>
+    <span class="n">statusFile</span> <span class="o">=</span> <span class="s2">&quot;/tmp/lsyncd.status&quot;</span><span class="p">,</span>
+    <span class="n">nodaemon</span>   <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">sync</span> <span class="p">{</span>
+    <span class="n">default</span><span class="p">.</span><span class="n">rsyncssh</span><span class="p">,</span>
+    <span class="n">source</span>    <span class="o">=</span> <span class="o">&lt;</span><span class="n">source</span> <span class="n">folder</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">host</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">destination</span> <span class="n">host</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">targetdir</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">dest</span> <span class="n">folder</span> <span class="n">on</span> <span class="n">host</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="n">delay</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">rsync</span>     <span class="o">=</span> <span class="p">{</span>
+        <span class="n">binary</span>   <span class="o">=</span> <span class="s2">&quot;/usr/local/bin/rsync&quot;</span><span class="p">,</span>
+        <span class="n">archive</span>  <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="n">compress</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">exclude</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;build&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;downloads&quot;</span>
+    <span class="p">},</span>
+    <span class="n">ssh</span> <span class="o">=</span> <span class="p">{</span>
+       <span class="n">identityFile</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">private</span> <span class="n">key</span><span class="o">&gt;</span><span class="p">,</span>
+       <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="n">User</span> <span class="o">=</span> <span class="s1">&#39;&lt;username on remote host&gt;&#39;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>    
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Start with <code>lsyncd ~/.lsyncd</code> and now lsyncd will sync the folders over (it will need <code>sudo</code> on OS X). The config is in lua syntax, so use lua conventions to expand and make it more effective. You can even daemonize the process and have it start on computer startup, though it has a tendency to hang</p>
+<h2>Caveats</h2>
+<ol>
+<li>It's not instant - as you write code, you'll have to wait a few seconds for the sync to happen. Get into the habit of writing a little doc and saving, by then, your code will have sync'd over and you can run</li>
+<li>Latency severely affects performance - it's over TCP so your bandwith is latency bound. It's much worse to servers that are far away. </li>
+<li>Keep it to code only - Having too many files and too much data to sync over can cause issues with the daemon. I generally keep a few configs handy to ensure I have a few lsyncd instances up that are independent of each other.</li>
+</ol>
+<p>Happy coding!</p>
+            <hr>
+              <!-- Pagination -->
+            <div class="pagination">
+              <a class="pagination" href="https://nayyarv.github.io/blog/my-contribution-to-numpy">
+             &larr; My Contribution to Numpy ]
+         </a>
+              <a class="pagination" href="https://nayyarv.github.io/blog/bayesian-gps" >[ Bayesian GPS &rarr;</a>
+            </div>
+										</section>
+
+								</div>
+								<div class="3u 12u(mobile)">
+
+									<!-- Sidebar -->
+                                        <section>
+                                            <header>
+                                                <h2>Recent Articles</h2>
+                                            </header>
+                                            <ul class="link-list">
+
+                                                
+                                                <li><a class = "red" href="/blog/some-technical-interview-questions">Some Technical Interview Questions</a><br>Interviews, ML, decisions</li>
+
+                                                
+                                                <li><a class = "red" href="/blog/bayesian-gps">Bayesian GPS</a><br>A Bayesian take on GPS esque maths</li>
+
+                                                
+                                                <li><a class = "red" href="/blog/lsyncd">Lsyncd</a><br>Or working on remote servers</li>
+
+                                                
+                                                <li><a class = "red" href="/blog/my-contribution-to-numpy">My Contribution to Numpy</a><br>Histograms, binwidth and the importance of communication</li>
+                                                
+                                            </ul>
+                                        </section>                                        <section>
+                                            <header>
+                                                <h2>Social</h2>
+                                            </header>
+                                            <p>
+                                                Vehicula fermentum ligula at pretium. 
+                                            </p>
+                                            <ul class="link-list">
+                                                <li><a class="red" href="https://github.com/nayyarv/">github</a></li>
+                                                <li><a class="red" href="mailto:nayyarv@gmail.com">email</a></li>
+                                            </ul>
+                                        </section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+                <div id="footer-wrapper">
+                    <footer id="footer" class="container">
+                        <div class="row">
+                            <div class="4u 12u(mobile)">
+
+                                <!-- Blurb -->
+                                    <section>
+                                        <h2>About Halcyonic For Pelican</h2>
+                                        
+                                            Based on the <a href="https://html5up.net/halcyonic">Halcyonic theme</a> by HTML5 UP, who graciously releases all of their themes under a <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons license</a>.<br>In short, that means you can do whatever you want with this theme, as long as HTML5 UP is credited.
+
+                                        </p>
+                                    </section>
+
+                            </div>                        </div>
+                    </footer>
+                </div>
+                            <!-- Copyright -->
+                <div id="copyright">
+                     &copy; 2022 | Design: <a href="http://html5up.net">HTML5 UP</a> | Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>
+                </div>
+
+
+		</div>
+
+		<!-- Scripts -->
+            <script src="/theme/js/jquery.min.js"></script>
+            <script src="/theme/js/skel.min.js"></script>
+            <script src="/theme/js/skel-viewport.min.js"></script>
+            <script src="/theme/js/util.js"></script>
+            <!--[if lte IE 8]><script src="/theme/js/ie/respond.min.js"></script><![endif]-->
+            <script src="/theme/js/main.js"></script>
+
+	</body>
+</html>
+
